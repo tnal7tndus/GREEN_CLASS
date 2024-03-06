@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>** 비구조할당 Destructuring Assignment **</title>
+    <script> "use strict"
+    // Test1) 배열을 이용해서 변수의 값 할당 
+    // => 배열 원소의 값들을 a, b, c 변수에 할당
+    // => 차례대로 할당됨  
+        let list = [1, 2, 3, 4, 5];
+        // => 일반적방법 : let a = list[0], b=list[1]....
+        // => 비구조할당 : 변수들을 한번에 나열하고 할당함
+        //let [a, b, c, d, e] = list;
+        //console.log(`** a=${a}, b=${b}, c=${c}, d=${d}, e=${e}`);
+        //let [a, b, c] = list;   //순서대로 할당
+        //console.log(`** a=${a}, b=${b}, c=${c}`);
+        
+        let [a, b, c, d, e, f, g] = list;
+        console.log(`** a=${a}, b=${b}, c=${c}, d=${d}, e=${e}, f=${f}, g=${g}`);
+        // => 왼편의 변수가 더 많은 경우 나머지는 undefined
+        
+    // Test2) 인자에 비구조할당 적용
+    // 2.1) 배열형
+    function testParam([a, b, c=a+b, d=a*b]){
+        console.log(`** TEST 2.1) 배열형 : a=${a}, b=${b}, c=${c}, d=${d}`);
+    }//testParam
+    testParam([10]);    // a=10, b=undefined, c=NaN, d=NaN
+    testParam([10, 20,]);   // a=10, b=20, c=30, d=200
+    testParam([10, 20, 300]);   // a=10, b=20, c=300, d=200
+    testParam([10, 20, 300, 400]);  // a=10, b=20, c=300, d=400
+    // 인자가 더 많은 경우 : 인자에 정의된 연산식 무시하고 우선 적용
+    // 인자가 더 작은 경우 : 나머지는 undefined, NaN
+    
+    // 2.2) 객체형
+    function testObj({ a, b, c=a+b, d=a*b }){
+        console.log(`** TEST 2.2) 객체형 : a=${a}, b=${b}, c=${c}, d=${d}`);
+    } //testObj
+    // 인자를 리터럴객체로 전달
+    testObj({a:100});   // a=100, b=undefined, c=NaN, d=NaN
+    testObj({a:100, b:200});    // a=100, b=200, c=300, d=20000
+    // 전달값이 인자의 연산식보다 우선 적용
+    testObj({a:100, b: 200, c:'ObjectTest'}); // a=100, b=200, c=ObjectTest, d=20000
+    // 없는 속성은 무시함
+    testObj({a:100, b: 200, c:'ObjectTest', f:'없는인자'}); // a=100, b=200, c=ObjectTest, d=20000
+
+    </script>
+</head>
+<body>
+    <pre>
+        ** 비구조할당 Destructuring Assignment **
+        => 객체나 배열의 값을 변수에 할당하는 표현식
+           기존에 일일히 객체나 배열에서 값을 꺼내여 변수에 저장하는 방법 대신 유용함.
+           
+        => 배열
+          let list = [ 1, 2, 3 ]
+          let [ a,b,c ] = list
+        
+        => 객체 ( n01_Object_des...html )
+          let object = {name: "홍길동", age: 20};
+          let {name, age} = object;
+    </pre>
+</body>
+</html>
