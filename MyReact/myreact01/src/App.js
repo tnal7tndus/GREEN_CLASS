@@ -1,5 +1,5 @@
 import Myheader from "./components/Header";
-import Body from "./components/Body";
+import Body from "./components02/Body04";
 import Footer from "./components/Footer";
 
 // ** import

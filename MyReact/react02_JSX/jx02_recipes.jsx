@@ -45,6 +45,7 @@ const data = [
   } // data 배열의 두번째 원소 : 객체2 (생선 타코)
 ]
 // ** Recipe 컴포넌트
+// (인자들) => { return 하나의 엘리먼트 }
 const Recipe = ({ name, ingredients, steps }) =>
     <section id={name.toLowerCase().replace(/ /g, "-")}>
         <h1>{name}</h1>
