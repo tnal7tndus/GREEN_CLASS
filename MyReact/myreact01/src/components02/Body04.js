@@ -41,7 +41,7 @@ function Body() {
   console.log('** Body 컴포넌트 Update !');
   return (
     <div className='body'>
-      <h2>** Props 와 State Test **</h2>
+      <h2>** Props와 State Test **</h2>
       <h3>state 변수: number={number}</h3>
       <p>Props로 number 값을 Child 컴포넌트에 전달</p>
       <Viewer number={number} />
