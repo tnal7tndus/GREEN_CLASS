@@ -37,8 +37,7 @@ import Even from "./components03/Even";
 // ** 컴포넌트 LifeCycle
 // => 컴포넌트는 개념적으로 props를 input으로 하고
 //    UI가 어떻게 보여야 하는지 정의하는 React Element를 output으로 하는 함수.
-// => UI를 구성하기 위해서는 화면에 컴포넌트를 
-//    그리고(Mounting), 갱신하고(Updating), 지워야(Unmounting) 함. 
+// => UI를 구성하기 위해서는 화면에 컴포넌트를 그리고(Mounting), 갱신하고(Updating), 지워야(Unmounting) 함. 
 // => 컴포넌트는 이 과정에서 각 프로세스 진행단계 별로 Lifecycle 함수로 불리는 특별한 함수가 실행됨.
 //    개발자는 이를 재정의하여 컴포넌트를 제어할 수 있음. (클래스컴포넌트)
 
@@ -49,8 +48,7 @@ import Even from "./components03/Even";
 // => 함수 컴포넌트에서는 useEffect를 이용하여 제어함.
 
 // ** useEffect
-// => 어떤 값이 변경될때마다 특정코드를 실행하는 리액트훅이며
-//    이것을 "특정값을 검사한다" 라고 표현함
+// => 어떤 값이 변경될때마다 특정코드를 실행하는 리액트훅이며 이것을 "특정값을 검사한다" 라고 표현함
 // => 예를 들면 State 값이 바뀔때 마다 변경된 값을 콘솔에 출력하게 할 수 있음
 
 // => useEffect(callback_함수, [deps]_의존성 배열)
@@ -140,8 +138,7 @@ function App() {
   // => 클린업 함수
   //  - useEffect의 콜백함수에서 return 하는 함수
   //  - 콜백함수를 재호출하기 전에 실행됨.
-  // => 그러므로 이를 이용하여 리랜더링 할때마다 새 setInterval 생성하고 
-  //    기존 setInterval은 삭제하도록 할 수 있다.  
+  // => 이를 이용하여 리랜더링 할때마다 새 setInterval 생성하고 기존 setInterval은 삭제하도록 할 수 있다.  
 
   // 6.1) 클린업 함수로 setInterval 삭제 추가
   

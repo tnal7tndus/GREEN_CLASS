@@ -1,6 +1,6 @@
 // ** useReducer()
 // => React에서 컴포넌트의 상태 관리를 위해 가장 많이 쓰이는 hook은 setState() 함수,
-//    좀 더 복잡한 상태 관리가 필요한 컴포넌트에서는 setReducer() hook 함수를 사용.
+//    좀 더 복잡한 상태 관리가 필요한 컴포넌트에서는 setReducer() hook 함수를 사용
 // => const [<상태 객체>, <dispatch 함수>] = useReducer(<reducer 함수>, <초기상태값>)
 // => reducer 함수는 현재 상태(state) 객체와 행동(action) 객체를 인자로 받아서 
 //    새로운 상태(state) 객체를 반환하는 함수.
@@ -14,10 +14,10 @@
 // => useReducer 적용
 //=================================================
 import './App.css';
-import Header from './components/Header';
-import TodoEditor from './components/TodoEditor';
-import TodoList from './components/TodoList';
-import TestComp from './components/TestComp';
+import Header from './components01/Header';
+import TodoEditor from './components01/TodoEditor';
+import TodoList from './components01/TodoList';
+import TestComp from './components01/TestComp';
 import { useReducer, useState, useRef } from "react";
 
 // 2. Mock Data
@@ -67,17 +67,17 @@ function reducer(state, action) {
 function App() {
   // 3.1) 배열을 리스트로 랜더링하기
   //const [ todo, setTodo ] = useState(mockTodo);
-  // *** => useReducer 로
+  // *** => useReducer로
   const [todo, dispatch] = useReducer(reducer, mockTodo);
 
   const idRef = useRef(mockTodo.length);
   /*
   *** 이전의 이벤트 핸들러 함수 
-    => dispatch_상태변화촉발(이벤트 감지) 와
-       reducer()_상태값 변경함수 로 나뉘어짐
+    => dispatch_상태변화촉발(이벤트 감지)와
+       reducer()_상태값 변경함수로 나뉘어짐
    */
   // 3.2) 일정추가 (Create) 함수 생성
-  // => 상태값 변경부분을 reducer() 에게 맡기고, 이를위해
+  // => 상태값 변경부분을 reducer()에게 맡기고, 이를위해
   //    dispatch 호출해서 action(type, data) 값을 전달해주어야함
   const onCreate = (content) => {
     dispatch({ type:"Create",
@@ -88,7 +88,7 @@ function App() {
                   createDate: new Date().getTime()
                }
     }); //dispatch
-    //setTodo([newItem, ...todo]); => reducer() 에게 맡김
+    //setTodo([newItem, ...todo]); => reducer()에게 맡김
     idRef.current +=1;
   }; //onCreate
 

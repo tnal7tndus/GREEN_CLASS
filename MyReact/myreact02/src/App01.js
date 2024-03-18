@@ -117,7 +117,7 @@ function App() {
   // ==============================================
   // 3.3) 일정 수정
   // => todo 변경 (checked:완료/ unChecked:미완료  수정)
-  // => todo.map() 으로 id가 일치하는 item의 isDone 값 변경후(토글방식) return
+  // => todo.map()으로 id가 일치하는 item의 isDone 값 변경후(토글방식) return
   // => 수정대상인 id를 인자로 전달받음
   const onUpdate = (targetId) => {
     setTodo( todo.map( (it) => 

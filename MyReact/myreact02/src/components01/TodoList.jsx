@@ -24,7 +24,8 @@
 // ======================================================================
 import "./TodoList.css";
 import TodoItem  from "./TodoItem";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useEffect } from 'react';
 
 const TodoList = ({todo, onUpdate, onDelete}) => {
 
@@ -56,6 +57,7 @@ const TodoList = ({todo, onUpdate, onDelete}) => {
  
   // 2) 분석 함수 호출
   // => analyzeTodo() 호출하고 return 값을 구조분해 할당
+  // => 랜더링 됨. 재생성 방지. 실행 무조건 방지
   //const {totalCount, doneCount, notDoneCount} = analyzeTodo();
 
   // 3) 분석 결과
@@ -89,6 +91,9 @@ const TodoList = ({todo, onUpdate, onDelete}) => {
   //    위 analyzeTodo()를 useMemo의 콜백함수로 사용하고,
   //    useMemo의 return 값을 바로 할당.
   const {totalCount, doneCount, notDoneCount} = useMemo(analyzeTodo, [todo]);
+  
+  //    useEffect와 비교하기
+  //const {totalCount, doneCount, notDoneCount} = useEffect(analyzeTodo, [todo]);
 
   return (
     <div className="TodoList">
