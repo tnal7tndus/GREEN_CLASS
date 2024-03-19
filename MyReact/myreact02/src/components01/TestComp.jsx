@@ -1,16 +1,16 @@
 // *** useReducer
-// => 컴포넌트 외부에서 state를 관리 할 수 있도록 해주는 React Hook. 
+// => 컴포넌트 외부에서 state 를 관리 할 수 있도록 해주는 React Hook. 
 
 // => 상태변화코드
-//    아래 onIncrease, onDecrease처럼 상태(State) 값을 변경하는 코드 
+//    아래 onIncrease, onDecrease 처럼 상태(State) 값을 변경하는 코드 
 // => 상태변화코드 분리
 //    컴포넌트 내부에 있는 상태변화코드를 컴포넌트 외부에 작성한다는 의미 
 //    이를 통해 가독성 과 유지보수성을 높여줌
 // => 그러나 useState 는 반드시 컴포넌트 내부에 있어야 하므로 분리할 수 없으며
-//    useReducer는 분리가능.
-//    파일로도 분리가능하여 컴포넌트 내부를 간결하게 해줌.
-// => state와 useReducer
-//    state의 복잡 정도에 따라 state 또는 useReducer 사용.
+//    useReducer 는 분리가능.
+//    파일로도 분리가능 하여 컴포넌트 내부를 간결하게 해줌.
+// => state 와 useReducer
+//    state 의 복잡 정도에 따라 state 또는 useReducer 사용.
 
 // *** useReducer 적용
 // => 생성문 형식
@@ -35,7 +35,7 @@ import { useState, useReducer } from "react";
 // => 상태변화함수 : 내부에서 상태값 변경
 function myreducer(state, action) {
   // 상태값 변경 구현
-  // => action.type이 "Increase" 이면  return state+action.data
+  // => action.type 이 "Increase" 이면  return state+action.data
   switch (action.type) {
     case "Increase": return state+action.data;
     case "Decrease": return state-action.data;
@@ -47,7 +47,7 @@ function myreducer(state, action) {
 // 2.2) 컴포넌트 내부에서 useReducer 적용
 // => useReducer 생성
 // => Button 클릭시 dispatch 호출하고,
-//    dispatch는 인자로 객체(type, data 값) 전달
+//    dispatch 는 인자로 객체(type, data 값) 전달
 //    이 객체는 state의 변경정보를 담고 있으며 action객체 라함.
 
 // => dispatch, reducer 등의 함수이름은 식별자임
@@ -73,7 +73,7 @@ function TestComp() {
 
 // 1. useState 적용 
 function TestComp01() {
-// => count를 state 객체로 관리
+// => count 를 state 객체로 관리
   const [count, setCount] = useState(0);
   const onIncrease = () => { setCount(count+1); }
   const onDecrease = () => { setCount(count-1); }

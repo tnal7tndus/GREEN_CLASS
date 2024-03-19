@@ -1,7 +1,7 @@
 
 // ** 3.2) 입력 (Create)
-// => new 일정(content)을 담을 state 생성
-// => new 일정 처리할 onChangeContent 이벤트 핸들러 작성
+// => new 일정(content) 을 담을 state 생성
+// => new 일정 처리할  onChangeContent 이벤트 핸들러 작성
 // => input 엘리먼트 속성 지정
 
 import { useState, useRef } from "react";
@@ -10,7 +10,7 @@ import "./TodoEditor.css";
 const TodoEditor = ({onCreate}) => {
 
   const [content, setContent] = useState("");
-  // => new 일정 처리할 onChangeContent 이벤트 핸들러 
+  // => new 일정 처리할  onChangeContent 이벤트 핸들러 
   const onChangeContent = (e) => {
     setContent(e.target.value);
   }; //onChangeContent
@@ -21,10 +21,10 @@ const TodoEditor = ({onCreate}) => {
   const onSubmit = (e) => {
     // ** 기능 업그레이드 1
     // => 입력값 무결성 확인
-    //    content 값이 비어있으면 input에 focus가 머물게 하여
+    //    content 값이 비어있으면 input 에 focus 가 머물게 하여
     //    빈 Data 입력방지 기능
     // if (content === "") {
-    if (!content)  { // content가 비어있으면 
+    if (!content)  { // content 가 비어있으면 
       e.preventDefault();
       inputRef.current.focus();
       return;
@@ -35,7 +35,7 @@ const TodoEditor = ({onCreate}) => {
   }; //onSubmit
 
   // ** 기능 업그레이드 2
-  // => input에서 일정 입력 후 엔터키 눌렀을때에도 submit이 가능하도록함 
+  // => input 에서 일정 입력 후 엔터키 눌렀을때에도 submit 이 가능하도록함 
   const onKeyDown = (e) => {
     if (e.keyCode === 13) { onSubmit(); }
   }; //onKeyDown
