@@ -1,6 +1,6 @@
 // ** Context 적용
 // => immport: useContext, TodoContext 
-// => useContext() 로 Data 전달받음
+// => useContext()로 Data 전달받음
 //    TodoList 컴포넌트 인자로 전달받은 Props Data는 필요 없으므로 삭제  
 
 // ======================================================================
@@ -11,8 +11,8 @@ import { TodoContext } from "../App04";
 
 const TodoList = () => {
   // ** Context 적용
-  // => 구조분해 적용해서 필요한 Data 만 정의
-  //    onUpdate, onDelete 는 TodoItem 으로 전달하기 위해 필요했지만,
+  // => 구조분해 적용해서 필요한 Data만 정의
+  //    onUpdate, onDelete는 TodoItem으로 전달하기 위해 필요했지만,
   //    이제는 필요없으므로 todo 만 정의함 
   const {todo} = useContext(TodoContext);
 
@@ -53,11 +53,11 @@ const TodoList = () => {
               onChange={onChangeSearch}
               placeholder="검색어를 입력하세요 ~" />
       <div className="list_wrapper" >
-        {/* ** 검색기능 : 배열(todo) 에  filter() 적용   
+        {/* ** 검색기능 : 배열(todo)에  filter() 적용   
             ** TodoItem Context 적용  
             => Context에서 직접 전달받는 Props는 재전달 할 필요가 없으므로 삭제한다.
               ( onUpdate, onDelete 속성 ) 
-               그러나 해당하는 Item 값은 Props 로 전달해야하므로 그냥둔다.  */}
+               그러나 해당하는 Item 값은 Props로 전달해야하므로 그냥둔다.  */}
         { getSearchResult().map( (it) => ( <TodoItem key={it.id} {...it} /> ) )}
       </div>
     </div>

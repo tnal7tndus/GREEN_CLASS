@@ -46,7 +46,7 @@
 // => 아래의 onUpdate, onDelete 함수를 리랜더링 할때마다 재생성 하지 않도록 적용.
 
 // ** React.memo
-// => 컴포넌트의 불필요한 리랜더링을 방지해주는 고차 컴포넌트 (Header 에 적용)
+// => 컴포넌트의 불필요한 리랜더링을 방지해주는 고차 컴포넌트 (Header에 적용)
 // => 리랜더링의 기준은 부모에서 전달된 Props가 변경된 경우에만 리랜더링됨    
 // => React.memo(메모이제이션 하려는 컴포넌트)
 //    인자로 전달된 컴포넌트를 메모이제이션 된 컴포넌트로 return
@@ -119,7 +119,7 @@ function reducer(state, action) {
 
 function App() {
   
-  // *** => useReducer 로
+  // *** => useReducer로
   const [todo, dispatch] = useReducer(reducer, mockTodo);
   const idRef = useRef(mockTodo.length);
 
@@ -135,7 +135,7 @@ function App() {
     }); //dispatch
     idRef.current +=1;
     console.log("** onCreate , todo.length => "+todo.length);
-    // => useCallback 을 적용하지않으므로 
+    // => useCallback을 적용하지않으므로 
     //    일정을 추가할때 마다 App 컴포넌트 리랜더링 되면서, 내부의 함수도 재생성되면서
     //    변경된 State 변수값에 접근하여 정확한 길이를 출력함.
   }; //onCreate
@@ -158,7 +158,7 @@ function App() {
       // => useCallback의 첫번째 인자인 콜백함수는 일정이 추가되어도 
       //    최초 생성시의 전달받은 State 변수값(todo.length 값 5))만 가지고 있음을 확인해본다. 
       //    ( 새로운 State 변수값 접근불가 )  
-      //    반면에 useCallback 을 적용하지않은 onCreate는 
+      //    반면에 useCallback을 적용하지않은 onCreate는 
       //    일정을 추가할때 마다 새로운 State 변수값에 접근하여 정확한 길이를 출력함.
     }, [] );
 
@@ -167,7 +167,7 @@ function App() {
     dispatch({ type:"Delete", targetId }); //dispatch 
   }, [] );
 
-  // ** useMemo 와 useEffect 와 호출시점 비교예제 
+  // ** useMemo와 useEffect와 호출시점 비교예제 
   useMemo(() => { console.log("** useMemo Call !!!"); }, []); //1st
   console.log("** App Update !! **");  //2nd
   useEffect(() => { console.log("** useEffect Call !!!"); }, []); //3rd (랜더링후)

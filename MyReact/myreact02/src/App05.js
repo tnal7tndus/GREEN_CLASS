@@ -1,8 +1,8 @@
 // ** TodoList (일정관리 앱) 리팩토링 4.
 // ** 리액트 Context 2.
 // => 불필요한 랜더링을 방지하여 최적화 하기위해 
-//    Context 를 역할별로 분리한다.
-// => Provider 를 계층적으로 적용할 수있으며,
+//    Context를 역할별로 분리한다.
+// => Provider를 계층적으로 적용할 수있으며,
 //    이 경우 하위 Provider 값이 우선적용됨.
 //  ( 복수의 Provider 를 형제 Level로 적용하는것은 불허_오류  )
 
@@ -70,14 +70,14 @@ function reducer(state, action) {
 // => 불필요한 랜더링을 방지하여 최적화 하기위해 
 //    Context 를 역할별로 분리한다.
 export const TodoStateContext = React.createContext();
-// => todo 의 변경에 영향받는 컴포넌트를 위한 Context 
+// => todo의 변경에 영향받는 컴포넌트를 위한 Context 
 export const TodoDispatchContext = React.createContext();
-// => dispath 함수 onCreate, onUpdate, onDelete 의 변경에
+// => dispath 함수 onCreate, onUpdate, onDelete의 변경에
 //    영향받는 컴포넌트를 위한 Context
 
 function App() {
   
-  // ** useReducer 로
+  // ** useReducer로
   const [todo, dispatch] = useReducer(reducer, mockTodo);
   const idRef = useRef(mockTodo.length);
 
@@ -123,7 +123,7 @@ function App() {
         => 이 경우 하위 Provider 값이 우선적용됨.
         => 용도별로 Context를 분리했다고 최적화가 적용되지는 않음
            TodoDispatchContext.Provider value 속성값 onCreate, onUpdate, onDelete 함수는
-           위에 useCallback 함수로 최적화된 onUpdate, onDelete 가 아니고
+           위에 useCallback 함수로 최적화된 onUpdate, onDelete가 아니고
            전달시점에 생성하여 보내기 때문에 별도로 메모이제이션을 적용해 주어야 최적화할 수 있다. 
       */} 
       <TodoStateContext.Provider value={todo}>

@@ -1,6 +1,6 @@
 // ** Context 적용2
 // => immport: useContext, TodoContext 
-// => todo 만 필요하므로 용도에 맞는 Context 사용
+// => todo만 필요하므로 용도에 맞는 Context 사용
 
 // ======================================================================
 import "./TodoList.css";
@@ -10,8 +10,8 @@ import { TodoStateContext } from "../App05";
 
 const TodoList = () => {
   // ** 용도에 맞는 Context 적용
-  // => TodoStateContext.Provider 에서 value={todo} 단일객체로 전달되므로 
-  //    { } 없이 todo 를 전달 받는다. 
+  // => TodoStateContext.Provider에서 value={todo} 단일객체로 전달되므로 
+  //    { } 없이 todo를 전달 받는다. 
   const todo = useContext(TodoStateContext);
 
   // ------------------------------------------------
@@ -29,7 +29,7 @@ const TodoList = () => {
   const analyzeTodo = () => {
     console.log("** analyzeTodo 호출!! **");
     const totalCount=todo.length;
-    // => 배열 todo의 isDone 의 값이 true 인 item의 갯수 
+    // => 배열 todo의 isDone의 값이 true인 item의 갯수 
     const doneCount= todo.filter( (it) => it.isDone ).length;
     const notDoneCount= totalCount - doneCount;
     return { totalCount, doneCount, notDoneCount } ;
@@ -51,10 +51,10 @@ const TodoList = () => {
               onChange={onChangeSearch}
               placeholder="검색어를 입력하세요 ~" />
       <div className="list_wrapper" >
-        {/* ** 검색기능 : 배열(todo) 에  filter() 적용   
+        {/* ** 검색기능 : 배열(todo)에  filter() 적용   
             ** TodoItem Context 적용  
-            => Context에서 직접 전달받는 Props는 필요 없으므로 삭제한다.
-               그러나 해당하는 Item 은 Props 로 전달해야하므로 그냥둔다.  */}
+            => Context에서 직접 전달받는 Props는 필요없으므로 삭제한다.
+               그러나 해당하는 Item은 Props로 전달해야하므로 그냥둔다.  */}
         { getSearchResult().map( (it) => ( <TodoItem key={it.id} {...it} /> ) )}
       </div>
     </div>
