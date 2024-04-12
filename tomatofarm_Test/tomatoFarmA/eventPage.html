@@ -1,0 +1,453 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/d68045e863.js" crossorigin="anonymous"></script>
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 기본 CSS, JS -->
+    <link rel="stylesheet" href="/tomatoFarmA/resources/css/00default.css">
+    <!-- 헤더 CSS, JS -->
+    <link rel="stylesheet" href="/tomatoFarmA/resources/css/00header.css">
+    <script defer src="/tomatoFarmA/resources/js/00header.js"></script>
+    <!-- 페이지 CSS, JS -->
+    <link rel="stylesheet" href="/tomatoFarmA/resources/css/home.css">
+    <link rel="stylesheet" href="/tomatoFarmA/resources/css/eventPage.css">
+    <script defer src="/tomatoFarmA/resources/js/eventPage.js"></script>
+    <script defer src="/tomatoFarmA/resources/js/home.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <title>토마토팜 || 메인</title>
+</head>
+
+<body>
+    <header id="topBar">
+        <div id="loginBar">
+            <div class="container">
+                <a href="">고객센터</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="">로그인</a>
+            </div>
+        </div>
+
+        <div id="searchBar">
+            <div class="container">
+                <div id="logoBox">
+                    <a href="/tomatoFarmA/">
+                        <img src="/tomatoFarmA/resources/img/logo.png" alt="">
+                        <h1>토마토팜 tomatoFarm</h1>
+                    </a>
+                </div>
+                <form id="searchBox" action="/tomatoFarmA/item/list">
+                    <input id="searchBoxInput" type="text" name="keyword" placeholder="검색어를 입력해주세요.">
+                    <i class="fa-solid fa-circle-xmark" onclick="resetInputBox()"></i>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div id="searchRightBox">
+                    <div id="myPage">
+                        <a><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <div id="myCart">
+                        <a><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div id="myItem">
+                        <a><i class="fa-solid fa-box-archive"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="container">
+                <div id="categoryBox">
+                    <div onmouseover="firstCategoryVisible()" id="categoryTag"><i
+                            class="fa-solid fa-bars"></i>&nbsp;&nbsp;&nbsp;카테고리</div>
+                    <ul onmouseout="firstCategoryHidden()" onmouseover="firstCategoryVisible()" id="firstCategory">
+                        <li></li>
+                        <li id="firstCategorySearch">
+                            <div>
+                                <input type="text"><i class="fa-solid fa-circle-xmark"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_vitamin.png" alt="category_vitamin">건강식품</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_chicken.png" alt="category_chicken">계육
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_etc.png" alt="category_etc">기타</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_wheat.png" alt="category_wheat">농산가공
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_pig.png" alt="category_pig">돈육</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_noodle.png" alt="category_noodle">면류
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_flour.png" alt="category_flour">분말류
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_blush.png" alt="category_blush">생활용품
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_detergent.png" alt="category_detergent">세제류
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_fish.png" alt="category_fish">수산가공</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_vegetable.png" alt="category_vegetable">야채
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_wheat.png" alt="category_wheat">양곡</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_sheep.png" alt="category_sheep">양육</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_seashel.png" alt="category_seashel">어패류
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_cow.png" alt="category_cow">우육</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_cheese.png" alt="category_cheese">유제품
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_oils.png" alt="category_oils">유지류</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_drink.png" alt="category_drink">음료ㆍ차
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_gimbap.png" alt="category_gimbap">일반가공
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_bread.png" alt="category_bread">제과</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_cookedFood.png" alt="category_cookedFood">조리식품
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_seasoning.png" alt="category_seasoning">조미식품
+                        </li>
+                        <li><img src="/tomatoFarmA/resources/img/category_fruit.png" alt="category_fruit">청과</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_meat.png" alt="category_meat">축산가공</li>
+                        <li><img src="/tomatoFarmA/resources/img/category_seaweed.png" alt="category_seaweed">해조류
+                        </li>
+                    </ul>
+                    <ul onmouseout="firstCategoryHidden()" onmouseover="firstCategoryVisible()" id="secondCategory">
+                        <li></li>
+                        <li id="secondCategorySearch">
+                            <div>
+                                <input type="text"><i class="fa-solid fa-circle-xmark"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </li>
+                        <li>채소</li>
+                        <li>과일ㆍ견과ㆍ쌀</li>
+                        <li>수산ㆍ해산ㆍ건어물</li>
+                        <li>정육ㆍ가공육ㆍ계란</li>
+                        <li>국ㆍ반찬ㆍ메인요리</li>
+                        <li>간편식ㆍ밀키트ㆍ샐러드</li>
+                        <li>면ㆍ양념ㆍ오일</li>
+                        <li>생수ㆍ음료ㆍ커피</li>
+                        <li>간식ㆍ과자ㆍ떡</li>
+                        <li>베이커리</li>
+                        <li>유제품</li>
+
+                    </ul>
+                </div>
+                <ul id="navBar">
+                    <li><a>밀키트 주문</a></li>
+                    <li><a>식단 주문</a></li>
+                    <li><a>재료 주문</a></li>
+                    <li><a>이벤트</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="keywordListDesign">
+            <div>
+                <ul>
+                    <!-- <c:forEach items="${requestScope.abc}" var="a" varStatus="juh" begin="0" end="4">
+                                <c:choose>
+                                    <c:when test="${juh.count == 1}">
+                                        <li class='current'><a
+                                                href="/tomatoFarmA/item/list?keyword='${a.keyword}'">${a.keyword}</a>
+                                        </li>
+                                    </c:when>
+                                    <c:when test="${juh.count == 2}">
+                                        <li class='next'><a
+                                                href="/tomatoFarmA/item/list?keyword='${a.keyword}'">${a.keyword}</a>
+                                        </li>
+                                    </c:when>
+                                    <c:when test="${juh.count == 5}">
+                                        <li class='prev'><a
+                                                href="/tomatoFarmA/item/list?keyword='${a.keyword}'">${a.keyword}</a>
+                                        </li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li><a href="/tomatoFarmA/item/list?keyword='${a.keyword}'">${a.keyword}</a></li>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach> -->
+                    <li class="current">1111</li>
+                    <li class="next">2222</li>
+                    <li class="prev">3333</li>
+                    <li>4444</li>
+                    <li>5555</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- =================== -->
+
+
+    <main>
+
+        <div class="container">
+
+            <div id="eventPageTop_bg">
+                <div id="eventPageTop">
+                    <div>
+                        <p><span>토마토 팜</span>과 함께하는 명절</p>
+                        <p>
+                            김구원선생 / 프레시지
+                        </p>
+                        <span>새해 복 많이 받으세요 !</span>
+                    </div>
+                    <a href="">
+                        <i class="fa-solid fa-circle-play"></i> 행사 상품 보러가기
+                    </a>
+                </div>
+            </div>
+
+            <div id="eventDetail1_1">
+
+                <div>
+                    <div>명절 특가</div>
+                    <p>김구원 선생 X 프레시지</p>
+                    <span>- 2024-01-01 ~ 2024-12-31 -</span>
+                </div>
+                <div class="rlarndnjsCoupon">
+                    <div>
+                        <div>
+                            <p>10<span> %</span> 할인</p>
+                            <ul>
+                                <li>10% 할인 쿠폰 </li>
+                                <li>중복 할인 가능</li>
+                                <li>사용기한 : 이벤트 종료 전</li>
+                            </ul>
+                        </div>
+                        <a href="">쿠 폰 받 기</a>
+                    </div>
+                    <div>
+                        <div>
+                            <p>20<span> %</span> 할인</p>
+                            <ul>
+                                <li>20% 할인 쿠폰 </li>
+                                <li>중복 할인 불가능</li>
+                                <li>사용기한 : 이벤트 종료 전</li>
+                            </ul>
+                        </div>
+                        <a href="">쿠 폰 받 기</a>
+                    </div>
+                </div>
+
+                <div id="timePlace">
+
+                </div>
+            </div>
+
+            <div id="eventDetail1_2">
+                <div>
+                    <h2><span>김구원선생</span>과 함께하는 이벤트</h2>
+                    <ul>
+                        <li>밀키트 상품 10%할인</li>
+                        <li>신선식품 당일배송</li>
+                        <li>토마토팜 쿠폰과 중복가능</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>프레시지 함께하는 이벤트</h2>
+                    <ul>
+                        <li>밀키트 상품 10%할인</li>
+                        <li>신선식품 당일배송</li>
+                        <li>토마토팜 쿠폰과 중복가능</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>마이셰프 함께하는 이벤트</h2>
+                    <ul>
+                        <li>밀키트 상품 10%할인</li>
+                        <li>신선식품 당일배송</li>
+                        <li>토마토팜 쿠폰과 중복가능</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>토마토팜 함께하는 이벤트</h2>
+                    <ul>
+                        <li>밀키트 상품 10%할인</li>
+                        <li>신선식품 당일배송</li>
+                        <li>토마토팜 쿠폰과 중복가능</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div id="eventItemListBox">
+
+                <div id="brandItemTab">
+                    <div>#김구원선생</div>
+                    <div>#프레시지</div>
+                    <div>#마이셰프</div>
+                </div>
+
+                <span id="prevBt" class="itemListBtYH"><i class="fa-solid fa-arrow-left"></i></span>
+                <span id="nextBt" class="itemListBtYH"><i class="fa-solid fa-arrow-right"></i></span>
+
+
+                <div id="breandItemBox">
+                    <div class="brandItemList nextList">
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000001_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>9,000 원</p>
+                                <p>10,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000002_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>9,000 원</p>
+                                <p>10,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000003_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>9,000 원</p>
+                                <p>10,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000004_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>9,000 원</p>
+                                <p>10,000 원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="brandItemList currentList">
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000005_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>99,000 원</p>
+                                <p>100,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000006_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>99,000 원</p>
+                                <p>100,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000007_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>99,000 원</p>
+                                <p>100,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000008_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>99,000 원</p>
+                                <p>100,000 원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="brandItemList prevList">
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000009_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>999,000 원</p>
+                                <p>1,000,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000010_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>999,000 원</p>
+                                <p>1,000,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000011_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>김구원선생</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>999,000 원</p>
+                                <p>1,000,000 원</p>
+                            </div>
+                        </a>
+                        <a href="">
+                            <img src="/tomatoFarmA/resources/img/itemImg/5000012_1.jpg" alt="">
+                            <div>
+                                <p>#밀키트</p>
+                                <span>프레시지</span>
+                                <p>김구원선생 된장찌개 밀키트 세트</p>
+                                <p>999,000 원</p>
+                                <p>1,000,000 원</p>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+    <footer></footer>
+</body>
+
+</html>

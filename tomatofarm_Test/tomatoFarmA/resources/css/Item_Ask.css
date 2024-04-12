@@ -1,0 +1,33 @@
+.heightAuto {
+    height: auto !important;
+}
+
+
+#itemAskBar {
+    border: 1px solid #9B1B30;
+    width: calc(30% - 50px);
+    position: absolute;
+    left: 0;
+    top: 350px;
+    height: 500px;
+}
+#customerCenter{
+    height: 50px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+
+#askBox {
+    text-align: center;
+    width: 100%;
+}
+
+#askBox>div {
+    background-color: rgb(248, 245, 241);
+    align-items: center;
+    margin: 3px;
+    padding: 13px;
+}
+
