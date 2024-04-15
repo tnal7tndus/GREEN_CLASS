@@ -1,0 +1,304 @@
+* {
+    /* border: 1px solid; */
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    margin: auto;
+}
+
+#itemDetailBox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#imgBox {
+    width: 50%;
+}
+
+#imgBoxImg {
+    width: 100%;
+    text-align: center;
+}
+
+#imgBoxImg>img {
+    width: 95%;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+
+#imgBoxImgList {
+    width: 95%;
+    margin: auto;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#imgBoxImgList>div {
+    width: 80px;
+    margin: 10px 5px 5px 0px;
+    opacity: 0.5;
+}
+
+#imgBoxImgList>div>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#itemDetailSM {
+    width: calc(50% - 10px);
+    display: grid;
+    border: 2px solid #4C455630;
+    border-radius: 20px;
+    grid-template: 250px 100px 50px 70px 50px 50px 70px 200px/0.7fr 2fr;
+    padding: 10px;
+}
+
+#itemDetailTitle {
+    grid-column: 1/3;
+    line-height: 40px;
+    text-indent: 10px;
+    position: relative;
+}
+
+#title1 {
+    margin: 10px 0 0 10px;
+    width: 55px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 11px;
+    background-color: #CA4046;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-indent: 0px;
+}
+
+#title2 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#title3 {
+    color: gray;
+    line-height: 25px;
+}
+
+#title4 {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #d1151e;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    bottom: 75px;
+}
+
+#title4>span {
+    font-size: 50%;
+}
+
+#title5 {
+    color: gray;
+    text-decoration: line-through;
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    font-size: 20px;
+}
+
+#title6 {
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#itemDetailSM>div {
+    border-bottom: 1px solid #4C455630;
+}
+
+#itemDetailSM>div:nth-last-of-type(1) {
+    border-bottom: none;
+}
+
+#itemDetailSM>div:nth-of-type(n+2) {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#itemDetailSM>div:nth-of-type(2n+3) {
+    border-left: 1px solid #4C455630;
+    padding-left: 30px;
+}
+
+#itemSelect {
+    position: relative;
+    grid-column: 1/3;
+    line-height: 40px;
+}
+
+#itemSelect>div:nth-of-type(1) {
+    position: absolute;
+    top: 15px;
+}
+
+#countBox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#countBox>input {
+    height: 40px;
+    width: 50px;
+    text-align: center;
+}
+
+#countBox>button {
+    width: 40px;
+    height: 40px;
+}
+
+#price {
+    position: absolute;
+    right: 40px;
+    font-size: 16px;
+}
+
+#price>span {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#cart {
+    border: 1px solid #CA4046;
+    width: 250px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 15px;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+}
+
+#buy {
+    position: absolute;
+    color: white;
+    background-color: #CA4046;
+    right: 30px;
+    bottom: 0;
+    width: 250px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 15px;
+}
+
+#detailClick {
+    margin-top: 50px;
+    border: 1px solid #4C455630;
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+#detailClick>li {
+    width: 25%;
+    background-color: rgb(243, 243, 243);
+    line-height: 50px;
+    border-right: 1px solid #4C455630;
+}
+
+#detailClick>li:nth-last-of-type(1) {
+    border-right: none;
+}
+
+
+#introItem>img {
+    width: 100%;
+}
+
+.subTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.subTitle hr {
+    width: 20%;
+    height: 0;
+    margin: 0;
+}
+
+.subTitle img {
+    height: 100px;
+    position: absolute;
+    left: -100px;
+    top: calc((100% - 100px)/2);
+}
+
+.subTitle h4 {
+    font-size: 52px;
+    position: relative;
+}
+
+#askBoardBox{
+    position: relative;
+}
+
+#askBoardBox>h5{
+    margin-top: 30px;
+    font-size: 32px;
+    height: 80px;
+}
+
+#askBoardBox>a {
+    position: absolute;
+    right: 50px;
+    background-color: #CA4046;
+    top: 20px;
+    width: 100px;
+    line-height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+#askBoard{
+    height: 600px;
+    border-top: 3px solid #000;
+    display: grid;
+    grid-template-rows: repeat(5, 65px);
+}
+
+.boardRow{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.boardRow>div:nth-of-type(1){
+    width: 9%;
+}
+.boardRow>div:nth-of-type(2){
+    width: 60%;
+}
+.boardRow>div:nth-of-type(3){
+    width: 20%;
+}
+.boardRow>div:nth-of-type(4){
+    width: 19%;
+}
