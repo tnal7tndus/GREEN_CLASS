@@ -1,0 +1,147 @@
+nav {
+    height: 60px;
+    position: relative;
+    box-shadow: 0px 10px 10px -4px #CA404670
+}
+
+#categoryBox {
+    width: 160px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#navBar {
+    position: absolute;
+    left: 50%;
+    top: 2.5px;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#navBar>li {
+    width: 120px;
+    line-height: 53px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #640000;
+}
+
+#categoryTag:hover~#firstCategory {
+    display: block;
+}
+
+#firstCategory:hover {
+    display: block;
+}
+
+#secondCategory:hover {
+    display: block;
+}
+
+#firstCategory {
+    z-index: 3;
+    display: none;
+    position: relative;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    height: 400px;
+    width: 240px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top: 1px solid #DCAEAF;
+    border-bottom: 2px solid rgba(121, 121, 121, 0.2);
+}
+
+#firstCategory::-webkit-scrollbar {
+    width: 7px;
+}
+
+#firstCategory::-webkit-scrollbar-thumb {
+    background-color: #9b1b1f70;
+    border-radius: 10px;
+}
+
+#firstCategory>li {
+    border-left: 2px solid rgba(121, 121, 121, 0.2);
+    width: 230px;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 20px
+}
+
+#firstCategory>#firstCategorySearch {
+    position: sticky;
+    padding-top: 5px;
+    top: 0;
+    height: 45px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+#firstCategorySearch>form {
+    position: relative;
+    font-size: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#firstCategorySearch>form>input {
+    height: 30px;
+    width: 210px;
+    padding: 0;
+    border: 1px solid #9b1b20;
+    text-indent: 10px;
+}
+
+#firstCategorySearch>form>input:focus {
+    border: none;
+    outline: 2px solid #EAA6A2;
+}
+
+#firstCategorySearch>form>i:nth-of-type(1) {
+    position: absolute;
+    right: 40px;
+    font-size: 12px;
+    color: #EAA6A2;
+    visibility: hidden;
+}
+
+#firstCategorySearch>form>i:nth-of-type(2) {
+    position: absolute;
+    right: 15px;
+    top: calc((40px - 20px)/2);
+    color: #9b1b20;
+}
+
+#firstCategory>li img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+#firstCategory:hover~#secondCategory {
+    display: block;
+}
+
+#leftBar {
+    list-style: none;
+    position: fixed;
+    left: 0;
+}
+
+#leftBar>li>div {
+    display: none;
+}
+
+#leftBar>li>img {
+    width: 25px;
+    height: 25px;
+}

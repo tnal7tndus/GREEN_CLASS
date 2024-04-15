@@ -1,0 +1,40 @@
+#eventDetail1_2 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(4, 200px);
+    gap: 10px;
+}
+
+#eventDetail1_2>div {
+    border: 10px solid;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#eventDetail1_2>div>h2 {
+    margin-bottom: 20px;
+}
+
+#eventDetail1_2>div ul {
+    list-style-type: disc;
+}
+
+#eventDetail1_2>div:nth-of-type(1) {
+    border-color: #F2CF8A;
+    background-color: #f2cf8a1c;
+}
+
+#eventDetail1_2>div:nth-of-type(2) {
+    border-color: #aec5aacc;
+    background-color: #aec5aa21;
+}
+
+#eventDetail1_2>div:nth-of-type(3) {
+    border-color: #EF7601;
+    background-color: #ef740121;
+}
+
+#eventDetail1_2>div:nth-of-type(4) {
+    border-color: #9B1B20;
+    background-color: #9b1b1f38;
+}

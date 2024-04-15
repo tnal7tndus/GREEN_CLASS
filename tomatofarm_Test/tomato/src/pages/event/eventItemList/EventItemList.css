@@ -1,0 +1,122 @@
+#eventItemListBox {
+    margin-top: 50px;
+    position: relative;
+}
+
+/* #brandItemTab {
+    display: flex;
+}
+
+#brandItemTab>div {
+    border: 1px solid rgba(128, 128, 128, 0.349);
+    width: 33.333%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: none;
+} */
+
+#brandItemTab {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+#brandItemTab>div {
+    border: 1px solid rgba(128, 128, 128, 0.342);
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#brandItemTab>div:hover {
+    background-color: #9B1B20;
+    color: white;
+    font-weight: bold;
+}
+
+
+#eventItemListBox>span {
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    top: calc((620px - 50px) / 2 + 80px);
+}
+
+#prevBt {
+    left: -70px;
+}
+
+#nextBt {
+    right: -70px;
+}
+
+#eventItemListBox>span:hover {
+    background-color: rgba(128, 128, 128, 0.384);
+    border: none;
+}
+
+
+
+/* ========================================= */
+
+.brandItemList {
+    display: grid;
+    grid-template: repeat(2, 300px) / repeat(2, 590px);
+    gap: 20px;
+}
+
+
+.brandItemList>a {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    border: 1px solid rgba(128, 128, 128, 0.342);
+}
+
+.brandItemList>a>img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.brandItemList>a>div {
+    padding: 20px;
+}
+
+.brandItemList>a>div>span {
+    border-radius: 10px;
+    background-color: #F2CF8A;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+.brandItemList>a>div>p:nth-of-type(1) {
+    padding: 2px;
+    font-weight: bold;
+    color: #872642;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-indent: 5px;
+}
+
+.brandItemList>a>div>p:nth-of-type(2) {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.brandItemList>a>div>p:nth-of-type(3) {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.brandItemList>a>div>p:nth-of-type(4) {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: rgba(128, 128, 128, 0.459);
+}
