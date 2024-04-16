@@ -1,16 +1,13 @@
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Loading from './../../components/Loading';
-import Error from './../../components/Error';
-import ItemDetailBox from './descript/ItemDetailBox';
-import ReviewBoardBox from './review/ReviewBoardBox';
-import AskBoardBox from './ask/AskBoardBox';
+import Loading from '../../components/Loading';
+import Error from '../../components/Error';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { api } from '../../../model/model';
-import { getUserCart } from '../../redux/userCart/action';
+import Detail_descript from './descript/Detail_descript';
+import Detail_review_box from './review/Detail_review_box';
+import Detail_ask from './ask/Detail_ask';
 
-const ItemDetail = ({ propscode }) => {
+const Detail = ({ propscode }) => {
 
     const [searchParams] = useSearchParams();
     const itemCode = searchParams.get("code");
@@ -18,7 +15,7 @@ const ItemDetail = ({ propscode }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
-    
+
 
     useEffect(() => {
         axios.get(`http://localhost:8090/item/detailn?column=item.code&keyword=${propscode || itemCode}`
@@ -42,15 +39,15 @@ const ItemDetail = ({ propscode }) => {
 
     return (
         <>
-            <ItemDetailBox item={item} />
+            <Detail_descript item={item} />
             <hr className='container' />
-            <ReviewBoardBox item={item} />
+            <Detail_review_box item={item} />
             <hr className='container' />
-            <AskBoardBox item={item} />
+            <Detail_ask item={item} />
 
 
         </>
     );
 }
 
-export default ItemDetail
+export default Detail

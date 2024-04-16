@@ -35,8 +35,8 @@ public class OrderRequest {
 			totalDelivery += item.getDelivery();
 			totalPoint += (int)Math.ceil((item.getPrice() * 0.05) * item.getAmount());
 		}
-		ItemOrder itemOrder = ItemOrder.builder()
-								.orderDate(now)
+		Itemorder itemOrder = Itemorder.builder()
+//								.orderDate(now)
 								.id(orderId)
 								.item_name(orderName)
 								.price(totalPrice)

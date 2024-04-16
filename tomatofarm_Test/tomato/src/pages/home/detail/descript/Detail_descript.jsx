@@ -1,17 +1,17 @@
-import './ItemDetailBox.css';
+import './Detail_descript.css';
 
 import { useRef, useState, useEffect, useMemo } from 'react';
 import { makeComa, makeDiscountPrice } from '../../../components/MathFunction';
-import Loading from './../../../components/Loading';
+import Loading from '../../../components/Loading';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserCart, setUserCartStorage } from '../../../redux/userCart/action';
 import { SERVER_RESOURCE } from '../../../../model/server-config';
-import GoCartContainer from './GoCartContainer';
+import Cart_alert from './Cart_alert';
 import { setUserBuyStorage } from '../../../redux/userBuy/actions';
 import { api } from '../../../../model/model';
 
-const ItemDetailBox = ({ item }) => {
+const Detail_descript = ({ item }) => {
 
     /* 🫓REDUX🫓 */
     const dispatch = useDispatch();
@@ -68,7 +68,7 @@ const ItemDetailBox = ({ item }) => {
                 ele.parentNode.children[i].style.opacity = '0.5';
             }
         }
-        window.scrollTo(0,  235);
+        window.scrollTo(0, 235);
     }
 
     const clickInputCount = (type) => {
@@ -123,6 +123,7 @@ const ItemDetailBox = ({ item }) => {
     };
 
     const addBuy = async () => {
+        console.log(item.code)
         const response = await api(`/item/selectwhere?column=item.code&keyword=${item.code}`, 'get')
         console.log(response.data)
         dispatch(setUserBuyStorage([{ ...response.data, amount: +inputCountValue }]))
@@ -194,7 +195,7 @@ const ItemDetailBox = ({ item }) => {
                         <Loading />
                         :
                         gotoCart ?
-                            <GoCartContainer name={item.name} setGotoCart={setGotoCart} />
+                            <Cart_alert name={item.name} setGotoCart={setGotoCart} />
                             :
                             null
                 }
@@ -246,5 +247,5 @@ const ItemDetailBox = ({ item }) => {
     );
 }
 
-export default ItemDetailBox;
+export default Detail_descript;
 

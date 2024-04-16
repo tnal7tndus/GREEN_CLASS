@@ -5,6 +5,7 @@ import { api } from '../../../../model/model';
 import { useDispatch, useSelector } from 'react-redux';
 import { postUserBuy, setUserBuyForm } from '../../../redux/userBuy/actions';
 import { useNavigate } from 'react-router-dom';
+import { setUserCart } from '../../../redux/userCart/action';
 
 const Buy_total = () => {
 
@@ -13,11 +14,28 @@ const Buy_total = () => {
     const navigate = useNavigate();
     const userBuyItemList = useSelector(state => state.userBuy.form.itemList);
     const userBuy = useSelector(state => state.userBuy.form);
+    const userCart = useSelector(state => state.userCart.data);
     const user = useSelector(state => state.user.data);
 
+    const deleteUserCart = () => {
+        const result = [];
+        console.log(userCart);
+        for (let e of userBuy.itemList) {
+            for (let f of userCart) {
+                if (e.code == f.code)
+                    result.push(f.code)
+            }
+        }
+
+        console.log(result);
+        return result;
+    }
+
     const postOrder = () => {
+        dispatch(setUserCart(userCart.filter(e => !deleteUserCart().includes(e.code))))
         dispatch(postUserBuy(userBuy, user && user.token));
-        // sessionStorage.removeItem('buy')
+        navigate('/home/buy/end');
+        // sessionStorage.removeItem('buy');
     }
 
     return (

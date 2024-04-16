@@ -4,13 +4,23 @@ import BuyDeliveryBox from './deliveryAddress/BuyDeliveryBox';
 import Buy_total from './Buy_total';
 import { api } from '../../../../model/model';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUserBuyStorageClean } from '../../../redux/userBuy/actions';
 
 
 
 const BuyBox = () => {
+    const dispatch = useDispatch();
+    const userBuy = useSelector(state => state.userBuy);
 
     useEffect(() => {
         api('/visit/update?page=order', 'get')
+        return () => {
+            dispatch(setUserBuyStorageClean({
+                form: null,
+                buyList: []
+            }))
+        }
     }, [])
 
     return (

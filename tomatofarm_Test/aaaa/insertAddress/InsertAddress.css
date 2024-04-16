@@ -1,0 +1,58 @@
+/* #AddressForm {
+    display: ;
+} */
+
+#AddressForm {
+    display: flex;
+}
+
+#addressTitle {
+    width: 25%;
+}
+
+#AddressFormBox {
+    width: 75%;
+}
+
+
+#AddressForm>div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#AddressForm>div:nth-child(1) span {
+    color: blue;
+}
+
+#AddressForm #zonecodeBox>input {
+    width: 30%;
+}
+
+#AddressForm #AddressFormBox>div:nth-child(n+2):nth-child(-n+3)>input {
+    width: 70%;
+}
+
+#AddressFormBox #zonecodeBox button {
+    background-color: rgba(0, 0, 255, 0.164);
+    width: 100px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+
+#addressInfoBox>input:nth-child(1) {
+    width: 30%;
+}
+#addressInfoBox>input:nth-child(2) {
+    width: 20%;
+    margin-right: 15px;
+}
+
+#addressInfoBox>button {
+    width: 50px;
+    padding: 3px;
+    background-color: aqua;
+    /* opacity: 0.3; */
+}

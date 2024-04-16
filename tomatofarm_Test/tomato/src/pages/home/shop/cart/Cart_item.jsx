@@ -31,7 +31,7 @@ const Cart_item = () => {
             const token = userinfo.data.token;
             dispatch(getUserCart('/usercart/select', 'get', null, token));
         } else {
-            userCart && dispatch(getItemListAmount('/item/selectin', 'post', userCart.data, null));
+            userCart && dispatch(getItemListAmount('/item/selectin', 'post', userCart, null));
         }
     }, [])
 

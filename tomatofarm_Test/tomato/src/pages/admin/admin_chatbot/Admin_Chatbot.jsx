@@ -28,7 +28,6 @@ const Admin_Chatbot = () => {
         getdata();
     }, [])
 
-
     /* 오른쪽에 나타낼 채팅방의 roomSeq번호를 가지고 있는 배열 */
     const [showChatbot, setShowChatbot] = useState([]);
     console.log(showChatbot)
@@ -37,7 +36,7 @@ const Admin_Chatbot = () => {
         if (showChatbot.includes(value)) {
             setShowChatbot(showChatbot.filter(e => e != value));
         } else {
-            if (showChatbot.length < 3) {
+            if (showChatbot.length < 2) {
                 setShowChatbot([...showChatbot, value]);
             }
         }

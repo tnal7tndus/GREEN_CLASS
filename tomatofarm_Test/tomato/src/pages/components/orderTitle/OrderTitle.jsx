@@ -6,16 +6,15 @@ import { makeComa } from "../MathFunction";
 import './OrderTitle.css'
 
 const OrderTitle = () => {
-    
-    const userBuyResult = useSelector(state => state.userbuy.data)
 
-   
+    const userBuyResult = useSelector(state => state.userBuy.data)
+
     return (
         <div className="orderTitle">
             <h4>배송 대기중</h4>
             <div className="orderTitleContent">
                 <div className="orderTitleIMG">
-                    <img src={SERVER_RESOURCE + `/img/${userBuyResult.item_code}.png`} alt={userBuyResult.item_name} />
+                    <img src={SERVER_RESOURCE + `/img/itemImg/${userBuyResult.item_code}_2.jpg`} alt={userBuyResult.item_name} />
                 </div>
                 <div className="orderTitleDetail">
                     <p className="orderTitleDate">{new Date(userBuyResult.orderDate).getFullYear()}- {new Date(userBuyResult.orderDate).getMonth()}-{new Date(userBuyResult.orderDate).getDay()}</p>

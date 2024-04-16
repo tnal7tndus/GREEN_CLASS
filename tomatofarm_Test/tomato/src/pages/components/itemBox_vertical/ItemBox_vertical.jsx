@@ -2,8 +2,6 @@ import './ItemBox_vertical.css'
 import { Link } from 'react-router-dom';
 import { makeComa } from '../MathFunction';
 import { SERVER_RESOURCE } from '../../../model/server-config';
-import { useState } from 'react';
-import ItemDetailBox from './../../home/detail/descript/ItemDetailBox';
 
 const ItemBox_vertical = ({ item }) => {
     

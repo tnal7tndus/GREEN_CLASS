@@ -33,6 +33,21 @@
     top: 0px;
     font-size: 20px;
     z-index: 5;
+    cursor: pointer;
+}
+
+#chatBox>h3>.refresh {
+    color: white;
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    font-size: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#chatBox>h3>.refresh i {
+    transition: 2s ease-out;
 }
 
 #chatBox::-webkit-scrollbar {

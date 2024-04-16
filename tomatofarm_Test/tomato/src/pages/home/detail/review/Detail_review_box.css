@@ -15,6 +15,7 @@
 }
 
 #reviewWrite {
+    cursor: pointer;
     position: absolute;
     right: 20px;
     background-color: #9b1b20;
@@ -24,6 +25,10 @@
     border-radius: 10px;
     text-align: center;
     color: white;
+}
+
+#reviewWrite:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
 }
 
 #reviewBoardBox #reviewBoard {
@@ -65,7 +70,7 @@
     margin: 0 8px;
 }
 
-#reviewNone{
+#reviewNone {
     height: 200px;
     font-weight: 500;
     font-size: 20px;

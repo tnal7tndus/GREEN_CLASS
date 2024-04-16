@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './AskBoardRow.css';
+import './Detail_ask_row.css';
 import axios from 'axios';
 
 
-const AskBaordRow = ({ itemAsk }) => {
+const Detail_ask_row = ({ itemAsk }) => {
     const [askDetail, setAskDetail] = useState(false);
     const [askPassword, setAskPassword] = useState("");
     const [passwordSubmit, setPasswordSubmit] = useState(false);
@@ -68,19 +68,23 @@ const AskBaordRow = ({ itemAsk }) => {
                     itemAsk.password == null ?
                         <div className="boardAnswer_content">
                             {itemAsk.contents}
-                            <div>
-                                🍅🍅🍅🍅🍅답변🍅🍅🍅🍅🍅<br />
-                                {itemAsk.reply}
-                            </div>
+                            {itemAsk.reply &&
+                                <div>
+                                    🍅🍅🍅🍅🍅답변🍅🍅🍅🍅🍅<br />
+                                    {itemAsk.reply}
+                                </div>
+                            }
                         </div>
                         :
                         passwordSubmit ?
                             <div className="boardAnswer_content">
                                 {itemAsk.contents}
-                                <div>
-                                    🍅🍅🍅🍅🍅답변🍅🍅🍅🍅🍅<br />
-                                    {itemAsk.reply}
-                                </div>
+                                {itemAsk.reply &&
+                                    <div>
+                                        🍅🍅🍅🍅🍅답변🍅🍅🍅🍅🍅<br />
+                                        {itemAsk.reply}
+                                    </div>
+                                }
                             </div>
                             :
                             passwordFail ?
@@ -100,4 +104,4 @@ const AskBaordRow = ({ itemAsk }) => {
     );
 }
 
-export default AskBaordRow;
+export default Detail_ask_row;

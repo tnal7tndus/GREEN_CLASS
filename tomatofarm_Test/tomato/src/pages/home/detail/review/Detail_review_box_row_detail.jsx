@@ -1,21 +1,6 @@
-import { SERVER_RESOURCE } from '../../../../model/server-config';
-import './ReviewDetail.css';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import './Detail_review_box_row_detail.css';
 
-
-const ReviewDetail = ({ item, itemReview, reviewDetail, setReviewDetail }) => {
-
-    const [review, setAsk] = useState({
-        item_code: item.code,
-        writer: 'manager1',
-        title: '',
-        contents: '',
-        reply: null,
-        password: null,
-        type: '아이템'
-    })
-    
+const Detail_review_box_row_detail = ({ itemReview, reviewDetail, setReviewDetail }) => {
 
     const reivewDetailImgChange = (event) => {
         let ele = event.target.closest('div');
@@ -39,13 +24,13 @@ const ReviewDetail = ({ item, itemReview, reviewDetail, setReviewDetail }) => {
                     <div id="reviewDetailBox">
                         <div id="reviewDetailImg">
                             <div id="reviewDetailImgTop">
-                                <img src={SERVER_RESOURCE + `/img/itemImg/${item.code}_2.jpg`} alt="" />
+                                <img src={process.env.PUBLIC_URL + '/img/itemImg/5000001_2.jpg'} alt="" />
                                 <i className="fa-solid fa-arrow-left"></i>
                                 <i className="fa-solid fa-arrow-right"></i>
                             </div>
                             <div id="reviewDetailImgBottom">
-                                <div onClick={reivewDetailImgChange}><img src={SERVER_RESOURCE + `/img/itemImg/${item.code}_1.jpg`} alt={""} /></div>
-                                <div onClick={reivewDetailImgChange}><img src={SERVER_RESOURCE + `/img/itemImg/${item.code}_2.jpg`} alt={""} /></div>
+                                <div onClick={reivewDetailImgChange}><img src={process.env.PUBLIC_URL + `/img/itemImg/5000001_1.jpg`} alt={""} /></div>
+                                <div onClick={reivewDetailImgChange}><img src={process.env.PUBLIC_URL + `/img/itemImg/5000001_2.jpg`} alt={""} /></div>
                             </div>
                         </div>
                         <div id="reviewDetail_Write">
@@ -63,12 +48,7 @@ const ReviewDetail = ({ item, itemReview, reviewDetail, setReviewDetail }) => {
                 </div>
             }
         </>
-
-
-
-
-
     );
 }
 
-export default ReviewDetail;
+export default Detail_review_box_row_detail;

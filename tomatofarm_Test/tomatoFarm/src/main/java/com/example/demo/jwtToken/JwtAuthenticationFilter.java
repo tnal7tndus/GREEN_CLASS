@@ -79,9 +79,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 		try {
 			// 1) request 에서 토큰 가져오기.
 			String token = tokenProvider.parseBearerToken(request);
-			
-			if (token != null && !token.equalsIgnoreCase("null")) {
-				
+			if (token != null && !token.equalsIgnoreCase("null")&& !token.equalsIgnoreCase("undefined")) {
 				// 2) 토큰 검증 & userId 가져오기
 				//    JWT이므로 인가 서버에 요청 하지 않고도 검증 가능
 				//    TokenProvider 의 검증메서드를 통해 검증후 id 전달받음 (위조된 경우 예외처리 됨)

@@ -14,6 +14,8 @@ const ChatBotBox = ({
     /* index 페이지 전용 props */
     setShowChatbot, // index페이지에서 나타낼지 여부 상태값 변경 함수 
 }) => {
+
+    const [refresh, setRefresh] = useState(false);
     /* 로그인 상태 sessionStorage 값 */
     const userinfo = JSON.parse(sessionStorage.getItem('userinfo'));
 
@@ -26,7 +28,7 @@ const ChatBotBox = ({
         type: null,
         room_seq: admin_root,
         content: '',
-        writer: JSON.parse(sessionStorage.getItem('userinfo')).id, // sessionStorage에서 가져온 id
+        writer: JSON.parse(sessionStorage.getItem('userinfo')).id || '', // sessionStorage에서 가져온 id
     });
 
     /* text form 상태값 변경 함수*/
@@ -96,7 +98,8 @@ const ChatBotBox = ({
     /* admin 페이지에서 데이터 조회시 값 불러오는 함수 */
     useEffect(() => {
         admin_root && getMessageAll(admin_root);
-    }, [])
+        text.room_seq && getMessageAll(text.room_seq);
+    }, [refresh])
 
     /* 메세지 입력 input 태그 참조값 */
     const inputBox = useRef(null);
@@ -124,7 +127,7 @@ const ChatBotBox = ({
             });
         if (admin_root) {
             await api('/chat/makeroom', 'post', {
-                seq: admin_root,    
+                seq: admin_root,
                 admin: userinfo.id,
                 ing: 1
             }, userinfo.token)
@@ -157,6 +160,7 @@ const ChatBotBox = ({
                     {admin_root ? `순번 : ${admin_root}` : '토마토팜 상담챗봇'}
                     {admin_root && <div className="close" onClick={() => changeShowChatbot(admin_root)}><i className="fa-solid fa-xmark"></i></div>}
                     {setShowChatbot && <div onClick={() => setShowChatbot()} className="close"><i className="fa-solid fa-xmark"></i></div>}
+                    <div className="refresh" onClick={() => setRefresh(!refresh)}><i style={{ transform: refresh ? 'rotate(0deg)' : 'rotate(360deg)' }} className="fa-solid fa-arrows-rotate"></i></div>
                 </h3>
 
                 {

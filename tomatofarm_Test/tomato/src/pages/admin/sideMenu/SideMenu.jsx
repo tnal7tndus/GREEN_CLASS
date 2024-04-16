@@ -35,9 +35,9 @@ const SideMenu = ({ openSideBar, sideBarOpen }) => {
                     <li>
                         <Link to="/admin/chatbot"><i className="fa-solid fa-bullhorn"></i><br />채팅 상담</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/admin/graph"><i className="fa-solid fa-square-poll-vertical"></i><br />통계</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/admin/select"><i className="fa-solid fa-magnifying-glass"></i><br />상품 조회</Link>
                     </li>

@@ -31,7 +31,7 @@ const Home = () => {
             <ThirdContainer />
 
             {
-                showChatbot ?
+                userinfo && showChatbot ?
                     <ChatBotBox setShowChatbot={setShowChatbot} />
                     :
                     userinfo &&

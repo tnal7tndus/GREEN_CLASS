@@ -1,13 +1,13 @@
 
-import './ReviewWrite.css';
+import './Detail_review_write.css';
 import { useMemo, useState } from 'react';
-import Loading from './../../../components/Loading';
-import Error from './../../../components/Error';
+import Loading from '../../../components/Loading';
+import Error from '../../../components/Error';
 import { api } from '../../../../model/model';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeAlert } from '../../../redux/basic/actions';
 
-const ReviewWrite = ({ item, refresh, setRefresh, reviewWriteClick }) => {
+const Detail_review_write = ({ item, refresh, setRefresh, reviewWriteClick }) => {
     const user = useSelector(state => state.user.data)
     const dispatch = useDispatch();
     const [writeBoxClose, setWriteBoxClose] = useState(true);
@@ -201,4 +201,4 @@ const ReviewWrite = ({ item, refresh, setRefresh, reviewWriteClick }) => {
     );
 }
 
-export default ReviewWrite;
+export default Detail_review_write;
