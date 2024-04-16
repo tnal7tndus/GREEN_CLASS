@@ -8,13 +8,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginRequest, loginSuccess } from '../../redux/user/action';
 import { api } from '../../../model/model'
 import { getUserCart } from '../../redux/userCart/action';
-import { changeAlert } from '../../redux/basic/actions';
+import { changeAdmin, changeAlert } from '../../redux/basic/actions';
 
 const LoginBG = () => {
     console.log('LoginBG 랜더링')
     const user = useSelector(state => state.user);
     const passwordBox = useRef(null);
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const [loginValue, setLoginValue] = useState({
@@ -157,6 +156,7 @@ const LoginBG = () => {
                     login: true,
                     id: response.data.id
                 }));
+                dispatch(changeAdmin(response.data.admin))
                 dispatch(getUserCart('/usercart/merge', 'post', cart, response.data.token));
                 dispatch(changeAlert({
                     title: '로그인 성공!',

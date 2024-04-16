@@ -4,6 +4,10 @@ import SideMenu from './sideMenu/SideMenu';
 import Graph from "./graph/Graph";
 import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
+import Weather from "./weather/Weather";
+
+
+
 import Admin_Chatbot from './admin_chatbot/Admin_Chatbot';
 import Admin_data from "./admin_data/Admin_data";
 import Admin_ask from "./admin_ask/Admin_ask";
@@ -25,8 +29,8 @@ const Admin = () => {
                 page: 'admin'
             }
         })
-    }, [])
 
+    }, [])
 
     return (
         <>
@@ -39,6 +43,9 @@ const Admin = () => {
                     <Route path='/chatbot' element={<Admin_Chatbot />} />
                     <Route path='/graph' element={<Graph />} />
                 </Routes>
+                <div id="weatherAndCalender">
+                    <Weather />
+                </div>
             </div>
         </>
     );

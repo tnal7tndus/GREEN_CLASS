@@ -44,8 +44,12 @@ public class UserController {
 		if (user != null) { // 조회성공
 			if (passwordEncoder.matches(password, user.getPassword())) {
 				final String token = tokenProvider.create(user);
-				final UserToken userToken = UserToken.builder().token(token).id(user.getId())
-						.username(user.getUsername()).build();
+				final UserToken userToken = UserToken.builder()
+						.token(token)
+						.id(user.getId())
+						.username(user.getUsername())
+						.admin(user.getLevel() < 100 ? true : false)
+						.build();
 				result = ResponseEntity.status(HttpStatus.OK).body(userToken);
 			} else {
 				result = ResponseEntity.status(HttpStatus.BAD_GATEWAY).body("비밀번호가 일치하지 않습니다.");

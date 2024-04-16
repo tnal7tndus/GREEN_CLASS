@@ -11,6 +11,7 @@ import { setUser } from "../../redux/user/action";
 const Header = () => {
     console.log(`Header 랜더링`);
 
+    const admin = useSelector(state => state.basic.admin);
     const keyword = useSelector(state => state.basic.keyword);
     const [recentBox, setRecentBox] = useState(false)
     const navigate = useNavigate();
@@ -74,7 +75,7 @@ const Header = () => {
                                 <Link to="/member/signup">회원가입</Link>
                             </>
                     }
-                    {
+                    {admin &&
                         <Link to="/admin"> 관리자페이지</Link>
                     }
                 </div>

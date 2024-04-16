@@ -1,10 +1,11 @@
-import { CHANGEKEYWORD, CHANGE_ALERT } from "./actions";
+import { CHANGEKEYWORD, CHANGE_ADMIN, CHANGE_ALERT } from "./actions";
 
 
 const initialState = {
     basic: {
         keyword: '',
         alert: false,
+        admin: false
     }
 };
 
@@ -19,6 +20,11 @@ const basicReducer = (state = initialState.basic, action) => {
             return {
                 ...state,
                 alert: action.alert
+            };
+        case CHANGE_ADMIN:
+            return {
+                ...state,
+                admin: action.data
             };
         default:
             return state;
