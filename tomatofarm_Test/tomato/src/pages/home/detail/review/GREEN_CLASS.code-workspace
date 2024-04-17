@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../Mtest/GREEN_CLASS"
+		},
+		{
+			"path": "../../../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BusinessTeam"
+	}
+}
