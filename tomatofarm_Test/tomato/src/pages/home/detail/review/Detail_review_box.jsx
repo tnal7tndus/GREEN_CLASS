@@ -38,6 +38,7 @@ const Detail_review_box = ({ item }) => {
             setError(true);
         })
     }, [refresh])
+    
 
     if (loading) return <Loading />
     if (error) return <Error />
