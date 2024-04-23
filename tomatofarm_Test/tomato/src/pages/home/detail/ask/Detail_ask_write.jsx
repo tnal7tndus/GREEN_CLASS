@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeAlert } from '../../../redux/basic/actions';
 import { api } from '../../../../model/model';
 
-
 const Detail_ask_write = ({ item, setRefresh, refresh, itemAskClick }) => {
     const dispatch = useDispatch();
     const user = useSelector(state => state.user.data);
