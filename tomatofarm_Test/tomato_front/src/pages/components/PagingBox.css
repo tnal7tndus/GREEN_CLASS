@@ -1,0 +1,53 @@
+.pagingBox {
+    position: relative;
+    display: flex;
+    margin: auto;
+    gap: 50px;
+    height: 40px;
+    width: 300px;
+    align-items: center;
+}
+
+
+.pagingBox .pagingBoxNumber {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pagingBoxNumber .selected {
+    color: #9B1B30;
+    width: 25px;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.pagingBox p {
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    cursor: pointer;
+}
+
+.pagingBox i {
+    position: absolute;
+    font-size: 14px;
+}
+
+.pagingBox>.left2 {
+    right: calc(100% + 45px);
+}
+
+.pagingBox>.left1 {
+    right: calc(100% + 10px);
+}
+
+.pagingBox>.right1 {
+    left: calc(100% + 10px);
+}
+
+.pagingBox>.right2 {
+    left: calc(100% + 45px);
+}

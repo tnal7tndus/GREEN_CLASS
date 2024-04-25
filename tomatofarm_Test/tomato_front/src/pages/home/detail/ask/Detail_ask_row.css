@@ -1,0 +1,86 @@
+.boardAnswer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 50px;
+    font-size: 18px;
+}
+
+.boardAnswer:hover {
+    background-color: #fdffb5;
+    cursor: pointer;
+}
+
+.boardAnswer:nth-of-type(1) {
+    line-height: 60px;
+    border-bottom: 1px solid #000;
+}
+
+.boardAnswer {
+    height: auto;
+}
+
+.boardAnswer>div:nth-of-type(1) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.boardAnswer>div:nth-of-type(1)>div:nth-of-type(1) {
+    line-height: 60px;
+    width: 10%;
+    color: #CA4046;
+}
+
+.boardAnswer_reply {
+    width: 10%;
+}
+
+.boardAnswer_title {
+    width: 50%;
+}
+
+.boardAnswer_writer {
+    width: 15%;
+}
+
+.boardAnswer_regdate {
+    width: 15%;
+}
+
+.boardAnswer_content {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    background-color: aliceblue;
+
+}
+
+.boardAnswer_content>div {
+    margin-top: 20px;
+
+}
+
+#passwordCheck {
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+}
+
+#passwordCheck input {
+    padding: 10px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#passwordCheck button {
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#passwordCheck p {
+    width: 100%;
+}

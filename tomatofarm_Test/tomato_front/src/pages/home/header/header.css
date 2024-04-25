@@ -1,0 +1,174 @@
+.container {
+    width: calc(100vw - 30px);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#topBar {
+    height: 210px;
+    box-shadow: 0px 2px 10px 1px #9b1b2080;
+    box-sizing: border-box;
+}
+
+#loginBar {
+    height: 30px;
+    border-bottom: 1px solid #ca404650;
+    box-sizing: border-box;
+}
+
+#loginBar>.container {
+    line-height: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.8em;
+    color: #9b1b20;
+}
+
+#loginBar>.container>a {
+    line-height: 30px;
+    margin-left: 12px;
+}
+
+#searchBar {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 0.5px solid #9b1b2010;
+}
+
+#logoBox {
+    margin-left: 30px;
+    width: 250px;
+    height: 60px;
+}
+
+#logoBox>a>img {
+    width: 130px;
+    height: 100%;
+}
+
+#logoBox>a>h1 {
+    text-indent: -9999px;
+}
+
+#searchBox {
+    width: 400px;
+    height: 50px;
+    border: 1.5px solid #9b1b20;
+    box-sizing: border-box;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 25px)
+}
+
+#searchBox>i:nth-of-type(1) {
+    position: absolute;
+    color: #EAA6A2;
+    font-size: 20px;
+    top: calc(25px - 10px);
+    right: calc(55px);
+    visibility: hidden;
+}
+
+#searchBox>button {
+    position: absolute;
+    top: calc(25px - 12.5px);
+    right: calc(12.5px);
+    color: #9b1b20;
+    font-size: 0px;
+}
+
+#searchBox>button>i {
+    font-size: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#searchBox>button:focus {
+    border: none;
+    outline: none;
+}
+
+#searchBox>input {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding-right: 80px;
+    border: none;
+    text-indent: 10px;
+}
+
+#searchBox>input:focus {
+    outline: 2.5px solid #9b1b20;
+}
+
+#searchBox>#recentBox {
+    background-color: #fff4f4;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 3.5px);
+    height: 100px;
+    z-index: 5;
+    outline: 1px solid;
+    overflow: auto;
+}
+
+#searchBox>#recentBox::-webkit-scrollbar {
+    width: 7px;
+}
+
+#searchBox>#recentBox::-webkit-scrollbar-thumb {
+    background-color: #9b1b1f70;
+}
+
+#searchBox>#recentBox a {
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+
+#searchBox>#recentBox a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+#searchBox>#recentBox>#recentBoxTitle {
+    font-size: 12px;
+    line-height: 1em;
+    background-color: #cacaca;
+    padding: 5px;
+}
+
+#searchRightBox {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#searchRightBox>div {
+    width: 65px;
+    color: #9b1b20;
+    text-align: center;
+    font-size: 12px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchRightBox>div>a {
+    display: flex;
+    flex-direction: column;
+}
+
+#searchRightBox i {
+    color: #9b1b20;
+    font-size: 30px;
+}

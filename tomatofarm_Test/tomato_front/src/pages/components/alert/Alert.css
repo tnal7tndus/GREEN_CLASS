@@ -1,0 +1,30 @@
+#alert {
+    position: fixed;
+    top: 0;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #9b1b20;
+    z-index: 10;
+}
+
+#alert div:nth-of-type(1) {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#alert div>h3 {
+    font-weight: 400;
+}
+
+#alert div>p {}
+
+#alert>div:nth-last-of-type(1) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #9b1b20;
+}

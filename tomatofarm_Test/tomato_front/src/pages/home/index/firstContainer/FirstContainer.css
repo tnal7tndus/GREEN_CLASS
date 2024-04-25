@@ -1,0 +1,46 @@
+#firstContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#firstContainer>h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #4C4556;
+}
+
+#firstContainer>h3>i {
+    color: #F6C026;
+}
+
+#firstContainerButton {
+    gap: 20px;
+    font-size: 15px;
+    margin-top: 30px;
+    height: 150px;
+}
+
+#firstContainerButton div {
+    display: inline-block;
+    margin: 0 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#firstContainerButton a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#firstContainerButton img {
+    border-radius: 50%;
+    background-color: #EAA6A240;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#firstContainerButton img:hover {
+    background-color: #ffabaf;
+}

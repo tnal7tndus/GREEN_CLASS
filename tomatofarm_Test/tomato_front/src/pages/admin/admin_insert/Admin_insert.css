@@ -1,0 +1,79 @@
+#totalContainer {
+    display: flex;
+    gap: 50px;
+    padding: 30px;
+    height: 90%;
+}
+
+#totalContainer>div {
+    border: 1px solid rgba(128, 128, 128, 0.377);
+    border-radius: 20px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+#totalContainer>div:nth-child(2) {
+    padding: 10px;
+}
+
+#totalContainer>div:nth-of-type(1) {
+    width: 33%
+}
+
+#totalContainer>div:nth-of-type(2) {
+    width: 66%
+}
+
+#forInsertBox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.forInsertRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.forInsertRow>div:nth-child(1) {
+    text-indent: 30px;
+}
+
+.forInsertRow>div:nth-child(2) {
+    margin: auto;
+}
+
+.forInsertRow>div:nth-child(2)>input {
+    text-indent: 7px;
+}
+
+.forbuttonBox {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.forbuttonBox>button {
+    background-color: #9B1B30;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#waitInsertBox {
+    position: relative;
+}
+
+#waitInsertBox>div {
+    margin-top: 40px;
+}
+
+#waitInsertBox button {
+    padding: 5px;
+    color: white;
+    background-color: #9B1B30;
+    position: absolute;
+    right: 38px;
+    z-index: 10;
+}

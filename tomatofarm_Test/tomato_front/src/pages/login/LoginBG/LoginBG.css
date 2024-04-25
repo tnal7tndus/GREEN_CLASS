@@ -1,0 +1,128 @@
+#loginBG {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-radius: 40px;
+    width: 450px;
+    height: 400px;
+    display: block;
+    background-color: white;
+    text-align: center;
+}
+
+#loginBG>a {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#loginBox {
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    width: 75%;
+}
+
+#loginBox>div {
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    margin: auto;
+    height: 50px;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+#loginBox>div:focus-within {
+    z-index: 3;
+}
+
+#loginBox>#idBox {
+    border-radius: 10px 10px 0 0;
+}
+
+#loginBox>#passwordBox {
+    border-radius: 0 0 10px 10px;
+    margin-top: -2px;
+}
+
+#loginBox>div>i {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.3;
+}
+
+#loginBox>div>input {
+    border: none;
+    width: calc(100% - 50px);
+}
+
+#loginBtn {
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    background-color: #9B1B30;
+    color: white;
+    margin-top: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ========================== */
+#logo {
+    height: 80px;
+}
+
+#loginBG #errorBox {
+    width: 100%;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #9B1B30;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 36px;
+    text-align: left;
+    border: none !important;
+    display: block;
+}
+
+#search {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#search>li {
+    width: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+#search span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+#successOrNot {
+    width: 350px;
+    margin: auto;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #9B1B30;
+    /* margin-top: 5px; */
+    /* margin-bottom: 5px; */
+    text-indent: inherit;
+}
+
+/* ========================== */

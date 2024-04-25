@@ -1,0 +1,64 @@
+.deliverySelectRow {
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    padding-top: 50px;
+    width: 95%;
+    margin: 10px auto;
+    border: 1px solid #9B1B30;
+    position: relative;
+    border-radius: 15px;
+}
+
+.deliverySelectRow div {
+    border: 1px solid #dfdfdf;
+}
+
+.deliverySelectRow div>label>p {
+    font-size: 12px;
+    text-indent: 9px;
+    color: rgb(138, 138, 138)
+}
+
+.deliverySelectRow input {
+    text-indent: 7px;
+    font-size: 16px;
+    border: none;
+    padding: 1px 0 4px 0;
+}
+
+.deliverySelectRow .info {
+    color: #9B1B30;
+    font-size: 18px;
+}
+
+.deliverySelectRow .addressName {
+    margin-top: -1px;
+}
+
+.deliverySelectRow .phoneNumber {
+    margin-top: -1px;
+}
+
+.deliverySelectRow .addressCode {
+    margin-top: -1px;
+}
+
+.deliverySelectRow .addressCode input:nth-of-type(1) {
+    width: 15%;
+}
+
+.deliverySelectRow .addressCode input:nth-of-type(2) {
+    width: 85%;
+}
+
+.delivery_select .select{
+    color: white;
+    background-color: #9B1B30;
+}
+.delivery_select .delete{
+    color: black;
+    background-color: #dcdcdc;
+    border: none;
+}
