@@ -87,8 +87,6 @@ const CustomerQA = (setRefresh) => {
         }
     }
 
-
-
     return (
         <>
             <div id="customerQABox" className="container">
