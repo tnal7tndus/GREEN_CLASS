@@ -28,6 +28,7 @@ const CustomerQA = (setRefresh) => {
             })
     }, [])
 
+    
     const bestQACdivck = (event) => {
         const ele = event.target.closest('.bestQARow').nextElementSibling;
         if (ele.style.display != "block") {
