@@ -143,6 +143,4 @@ const CustomerQA = (setRefresh) => {
         </>
     );
 }
-
-
 export default CustomerQA;
