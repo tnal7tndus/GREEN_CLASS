@@ -138,7 +138,9 @@ const CustomerQA = (setRefresh) => {
                             color: form.title.length > 0 && form.contents.length > 0 ? '#fff' : 'black'
                         }}
                         id="customerQAEnter">문의하기</button>
+                    
                 </div>
+                
             </div >
         </>
     );
