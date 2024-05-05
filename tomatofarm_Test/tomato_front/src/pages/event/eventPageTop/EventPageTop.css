@@ -1,0 +1,52 @@
+#eventPageTop {
+    /* background-image: url(/resources/img/jyhTest/topTest.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -140px;
+    background-position-x: -50px;
+    background-size: 120%;
+    height: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+
+#eventPageTop>div {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: 'East Sea Dokdo', sans-serif;
+    /* 여기 폰트패밀리가 인식 X -> 하위 요소에 모두 줘야하는 문제 */
+}
+
+#eventPageTop>div>p:nth-of-type(1) {
+    font-size: 70px;
+    font-family: 'East Sea Dokdo', sans-serif;
+}
+
+#eventPageTop>div>p:nth-of-type(2) {
+    font-size: 50px;
+    font-family: 'East Sea Dokdo', sans-serif;
+}
+
+#eventPageTop>div>p>span {
+    color: #872642;
+    text-decoration: overline;
+    font-family: 'East Sea Dokdo', sans-serif;
+}
+
+#eventPageTop>div>span {
+    font-size: 30px;
+    font-family: 'East Sea Dokdo', sans-serif;
+}
+
+#eventPageTop>a {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 300px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    background-color: #9B1B20;
+}

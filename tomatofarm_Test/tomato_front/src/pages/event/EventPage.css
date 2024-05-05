@@ -1,0 +1,6 @@
+#containerYH {
+    width: calc(100vw - 30px);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}

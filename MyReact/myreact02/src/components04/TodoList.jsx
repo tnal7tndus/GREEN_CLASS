@@ -53,7 +53,7 @@ const TodoList = () => {
               onChange={onChangeSearch}
               placeholder="검색어를 입력하세요 ~" />
       <div className="list_wrapper" >
-        {/* ** 검색기능 : 배열(todo)에  filter() 적용   
+        {/* ** 검색기능 : 배열(todo)에 filter() 적용   
             ** TodoItem Context 적용  
             => Context에서 직접 전달받는 Props는 재전달 할 필요가 없으므로 삭제한다.
               ( onUpdate, onDelete 속성 ) 

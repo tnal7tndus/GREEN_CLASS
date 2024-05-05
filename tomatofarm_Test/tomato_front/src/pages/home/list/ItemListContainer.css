@@ -1,0 +1,100 @@
+#listContainer {
+    margin-left: 280px;
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    width: calc(100vw - 30px - 10px - 280px);
+    max-width: calc(1200px - 10px - 280px);
+    flex-wrap: wrap;
+}
+
+#containerOption {
+    width: 100%;
+    height: 30px;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: end;
+}
+
+#total>span {
+    color: #9B1B30;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#listButton {
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    display: flex;
+    gap: 5px;
+}
+
+#listButton>li {
+    border: 1px solid rgba(128, 128, 128, 0.397);
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+}
+
+#listButton>li>div {
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    font-size: 0px;
+}
+
+#listButton>li:nth-child(1)>div {
+    background-position: 0px 0;
+}
+
+#listButton>li:nth-child(2)>div {
+    background-position: -20px 0;
+}
+
+#listButton>li:nth-child(3)>div {
+    background-position: -39.5px 0;
+}
+
+#detailBG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+}
+
+#detailBG>div {
+    width: 60%;
+    height: 80%;
+    margin: 10vh auto;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+#detailBG .container {
+    width: 100%;
+    min-width: 0px;
+}
+
+#detailBG #imgBox {
+    width: 50%;
+}
+
+#detailBG #itemDetail {
+    width: 45%;
+    margin: auto;
+}
+
+#detailBG #itemDetailBox #introItem {
+    width: 95%;
+    min-width: 0px;
+    margin: auto;
+}

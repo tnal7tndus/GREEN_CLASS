@@ -1,0 +1,318 @@
+#logo {
+    height: 80px;
+    top: 0;
+}
+
+#signBG>div>form>#errorBox {
+    width: 75%;
+    font-size: 12px;
+    height: 4em;
+    padding-left: 5px;
+    color: #9B1B30;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none !important;
+}
+
+#signBG #errorBox p {
+    line-height: 1.5em;
+}
+
+#historyback {
+    max-width: 30px;
+    max-height: 30px;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    z-index: 10;
+    font-size: 30px;
+    color: #9B1B30;
+}
+
+#signBG>div>a {
+    display: inline-block;
+    text-align: center;
+    margin-left: calc(50%);
+    margin-top: 20px;
+    transform: translate(-50%, 0);
+}
+
+#signBG {
+    width: 100%;
+    height: 100vh;
+}
+
+#signBG>#signform {
+    background-color: white;
+    width: 85%;
+    height: 90%;
+    max-height: 95vh;
+    display: block;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+
+#signBG>#signform::-webkit-scrollbar {
+    width: 10px;
+}
+
+#signBG>#signform::-webkit-scrollbar-thumb {
+    background-color: #9b1b1f70;
+    border-radius: 10px;
+}
+
+#signBG h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #9B1B30;
+    color: white;
+    width: 75%;
+    height: 40px;
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 15px;
+}
+
+#signBG input:focus {
+    outline: none;
+}
+
+#signUpBox {
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+#signUpBox>#writeOption {
+    width: 75%;
+    margin: auto;
+    font-size: 12px;
+    text-indent: 5px;
+    color: #9B1B30;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+#signUpBox>div {
+    border: 2px solid #e0e0e0;
+    width: 75%;
+    margin: auto;
+    line-height: 50px;
+    font-size: 18px;
+    position: relative;
+}
+
+#signUpBox>div>i {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.2;
+}
+
+#signUpBox>div>input {
+    border: none;
+    width: 280px;
+    opacity: 0.5;
+}
+
+#signUpBox>#idBox {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#signUpBox>#passwordBox {
+    margin-top: -2px;
+}
+
+#signUpBox>#nameBox {
+    margin-top: -2px;
+}
+
+#signUpBox>#phonenumberBox {
+    margin-top: -2px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 13px;
+}
+
+#signUpBox>#phonenumberBox>i {
+    text-align: center;
+    width: 50px;
+    font-size: 13px;
+
+}
+
+#signUpBox>#errorBox {
+    width: 350px;
+    margin: auto;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #9B1B30;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: inherit;
+}
+
+#signUpBox>#selectOption {
+    width: 350px;
+    margin: auto;
+    font-size: 12px;
+    text-indent: 5px;
+    color: #4C4556;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+#signUpBox>#addressBox {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: 1px solid #4C455650;
+}
+
+#signUpBox>#emailBox {
+    margin-top: -2px;
+}
+
+#signUpBox>#genderBox {
+    margin-top: -2px;
+}
+
+#signUpBox>#birthdayBox {
+    margin-top: -2px;
+}
+
+#signUpBox>#emailBox>i:nth-of-type(2) {
+    width: 30px;
+    font-size: 14px;
+}
+
+#signUpBox>#emailBox>input {
+    width: 120px;
+}
+
+#signUpBox>#emailBox>select {
+    border: none;
+    width: 130px;
+    height: 30px;
+    text-indent: 5px;
+    opacity: 0.4;
+}
+
+#emailWriteBox {
+    display: none;
+}
+
+#signUpBox>#birthdayBox>input:nth-of-type(1) {
+    width: 90px;
+    text-align: center;
+}
+
+#signUpBox>#birthdayBox>input:nth-of-type(2) {
+    text-align: center;
+    width: 80px;
+}
+
+#signUpBox>#birthdayBox>input:nth-of-type(3) {
+    text-align: center;
+    width: 80px;
+}
+
+#signUpBox>#birthdayBox {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#genderBox {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+#signUpBox>#genderBox>i {
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+}
+
+#genderBox>span {
+    width: 40px;
+    font-size: 13.5px;
+    color: gray;
+    opacity: 0.5;
+}
+
+#genderUl {
+    display: flex;
+    list-style: none;
+    width: 250px;
+    padding: 0;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+
+#genderUl li {
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 110px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+#genderUl input[type="radio"] {
+    display: none;
+    margin: 10px;
+}
+
+
+#joinBox {
+    display: block;
+    margin: auto;
+    padding: 0;
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #9B1B30;
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#genderBox #checked {
+    color: white;
+    background-color: #9B1B30;
+    opacity: 1;
+    border: none;
+}
+
+
+
+#successOrNot {
+    width: 350px;
+    margin: auto;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #9B1B30;
+    /* margin-top: 5px; */
+    /* margin-bottom: 5px; */
+    text-indent: inherit;
+}

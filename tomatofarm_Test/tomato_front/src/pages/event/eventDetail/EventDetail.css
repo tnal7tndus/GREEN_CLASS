@@ -1,0 +1,106 @@
+#eventDetail1_1 {
+    height: 750px;
+    /* background-image: url(/resources/img/jyhTest/event1.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 50px;
+}
+
+#eventDetail1_1>div:nth-of-type(1) {
+    width: 600px;
+    text-align: center;
+    font-family: 'East Sea Dokdo', sans-serif;
+    position: absolute;
+    left: calc((100% - 600px) / 2);
+    top: 150px;
+}
+
+
+#eventDetail1_1>div:nth-of-type(1)>div {
+    font-size: 100px;
+    font-family: 'East Sea Dokdo', sans-serif;
+}
+
+#eventDetail1_1>div:nth-of-type(1)>span {
+    font-family: 'East Sea Dokdo', sans-serif;
+    font-size: 34px;
+}
+
+
+#eventDetail1_1>div>p {
+    font-size: 20px;
+    font-family: 'KBO-Dia-Gothic_bold';
+}
+
+
+.rlarndnjsCoupon {
+    position: absolute;
+    width: 420px;
+    left: calc((100% - 420px) / 2);
+    bottom: 90px;
+    transition: 1s;
+    bottom: 50px;
+}
+
+
+
+.rlarndnjsCoupon>div {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    height: 170px;
+    margin-top: 10px;
+}
+
+.rlarndnjsCoupon>div>div {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.rlarndnjsCoupon>div>div>p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.rlarndnjsCoupon>div>div>p>span {
+    font-size: 20px;
+}
+
+.rlarndnjsCoupon>div>a {
+    writing-mode: vertical-lr;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    line-height: 70px;
+    background-color: #9B1B20;
+}
+
+#timePlace {
+    width: 600px;
+    display: flex;
+    gap: 30px;
+    font-family: 'ChosunCentennial';
+    position: absolute;
+    left: calc((100% - 600px) / 2);
+    top: 38px;
+
+}
+
+#timePlace>div {
+    font-size: 70px;
+    width: 25%;
+    text-align: center;
+}
+
+#timePlace>div>span {
+    font-size: 25px;
+}

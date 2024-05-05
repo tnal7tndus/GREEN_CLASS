@@ -1,0 +1,54 @@
+.deliveryUpdate {
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    padding-top: 50px;
+    width: 95%;
+    margin: 10px auto;
+    border: 1px solid #9B1B30;
+    position: relative;
+    border-radius: 15px;
+}
+
+.deliveryUpdate div {
+    border: 1px solid #dfdfdf;
+}
+
+.deliveryUpdate div>label>p {
+    font-size: 12px;
+    text-indent: 9px;
+    color: rgb(138, 138, 138)
+}
+
+.deliveryUpdate input {
+    text-indent: 7px;
+    font-size: 16px;
+    border: none;
+    padding: 1px 0 4px 0;
+}
+
+.deliveryUpdate .info {
+    color: #9B1B30;
+    font-size: 18px;
+}
+
+.deliveryUpdate .addressName {
+    margin-top: -1px;
+}
+
+.deliveryUpdate .phoneNumber {
+    margin-top: -1px;
+}
+
+.deliveryUpdate .addressCode {
+    margin-top: -1px;
+}
+
+.deliveryUpdate .addressCode>label:nth-of-type(1) input:nth-of-type(1) {
+    width: 15%;
+}
+
+.deliveryUpdate .addressCode>label:nth-of-type(1) input:nth-of-type(2) {
+    width: 85%;
+}

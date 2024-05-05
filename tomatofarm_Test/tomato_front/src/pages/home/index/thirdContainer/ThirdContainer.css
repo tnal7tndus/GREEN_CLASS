@@ -1,0 +1,14 @@
+#thirdContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#thirdContainer>h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #4C4556;
+}
+
+#thirdContainer>h3>i {
+    color: #F6C026;
+}

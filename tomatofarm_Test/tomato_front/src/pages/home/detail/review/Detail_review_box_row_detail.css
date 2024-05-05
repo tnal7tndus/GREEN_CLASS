@@ -1,0 +1,132 @@
+#reviewDetailForm {
+    background-color: #00000090;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#reviewDetailBox {
+    background-color: #00000090;
+    position: fixed;
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reviewDetailBoxClose {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    background-color: #9B1B30;
+    color: #fff;
+    font-size: 35px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#reviewDetailImg {
+    width: 75%;
+    height: 100%;
+    position: relative;
+}
+
+#reviewDetailImgTop {
+    height: 85%;
+    background-color: #00000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#reviewDetailImgTop i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    position: absolute;
+    background-color: #9B1B30;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reviewDetailImgTop img {
+    position: absolute;
+    width: calc(100% - 22%);
+    height: 100%;
+    object-fit: contain;
+}
+
+#reviewDetailImgTop i:nth-of-type(1) {
+    left: 4%;
+}
+
+#reviewDetailImgTop i:nth-of-type(2) {
+    right: 4%;
+}
+
+#reviewDetailImgBottom {
+    background-color: #000;
+    overflow: hidden;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#reviewDetailImgBottom div{
+    width: 20%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#reviewDetailImgBottom img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#reviewDetail_Write {
+    display: block;
+    position: relative;
+    height: 800px;
+    width: 35%;
+    background-color: white;
+    border-bottom: 1px solid #141414;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 10px;
+}
+
+#reviewDetail_Write::-webkit-scrollbar {
+    width: 12px;
+}
+
+#reviewDetail_Write::-webkit-scrollbar-thumb {
+    background-color: #9b1b1f90;
+    border-radius: 10px;
+}
+
+#reviewDetail_Write p {
+    margin-top: 15px;
+    margin-left: 10px;
+    border-top: 0.5px solid #9b1b1f90;
+    padding: 10px;
+}
+
+#reviewDetail_Write p:nth-child(1) {
+    border-top: none;
+}

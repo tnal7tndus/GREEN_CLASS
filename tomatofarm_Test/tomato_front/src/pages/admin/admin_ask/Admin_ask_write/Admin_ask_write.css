@@ -1,0 +1,154 @@
+#AskWriteReplyContainer {
+    background-color: #9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: flex;
+}
+
+.WriteReplyBox::-webkit-scrollbar {
+    width: 10px;
+}
+
+.WriteReplyBox::-webkit-scrollbar-thumb {
+    background-color: #9b1b1f70;
+    border-radius: 10px;
+}
+
+#AskWriteReplyContainer>div {
+    position: relative;
+}
+
+.WriteReplyBox {
+    background-color: white;
+    height: 1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 50px;
+    width: 750px;
+}
+
+.replyTop {
+    display: flex;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+    border-top: 1px solid rgba(128, 128, 128, 0.432);
+    height: 150px;
+}
+
+#AskWriteReplyContainer .productIMG {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#AskWriteReplyContainer .productIMG img {
+    width: 130%;
+}
+
+#AskWriteReplyContainer .itemIntro {
+    width: 60%;
+    padding: 0 20px;
+    line-height: 30px;
+    flex-direction: column;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+#AskWriteReplyContainer .itemIntro span {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+#AskWriteReplyContainer .replyDetailBox {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 150px - 20px);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#AskWriteReplyContainer .replyDetailBox label {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+
+#AskWriteReplyContainer .replyDetailBox textarea {
+    width: 85%;
+    height: 100%;
+    margin-left: 20px;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#AskWriteReplyContainer #writeButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#AskWriteReplyContainer #writeCancle {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    padding: 0 15px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#AskWriteReplyContainer #writeCancle:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+
+#AskWriteReplyContainer #writeEnter {
+    cursor: pointer;
+    background-color: rgb(221, 221, 221);
+    border: 0px none;
+    padding: 0 15px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#AskWriteReplyContainer #writeEnter:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+
+#adminAskBoxClose {
+    cursor: pointer;
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    background-color: #9B1B30;
+    color: #fff;
+    font-size: 35px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#adminAskBoxClose:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}

@@ -1,0 +1,202 @@
+#customerQABox {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    position: relative;
+}
+
+#customerQABox h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #4c4556;
+    text-align: center;
+    margin: 30px 0;
+}
+
+#customerQABox>h3>i {
+    color: #F6C026;
+}
+
+#customerQABox h4 {
+    font-size: 24px;
+    text-align: left;
+    text-indent: 25px;
+}
+
+#bestQAForm {
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 0 20px;
+    flex-direction: column;
+    margin: 15px 0 50px 0;
+}
+
+#bestQAForm .bestQARow:hover {
+    background-color: #fdffb5;
+}
+
+#bestQAForm .bestQARow {
+    display: flex;
+    border-top: gray 1px solid;
+    flex-wrap: wrap;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#bestQAForm>div:nth-last-of-type(1) .bestQARow {
+    border-bottom: gray 1px solid;
+}
+
+#bestQAForm .bestQARow div {
+    list-style: none;
+    margin-right: 10px;
+    font-size: 17px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.bestQARow>div:nth-child(1) {
+    width: 10%;
+}
+
+.bestQARow>div:nth-child(2) {
+    width: 25%;
+}
+
+.bestQARow>div:nth-child(3) {
+    width: 60%;
+}
+
+#bestQAAnswer {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background-color: #f3f3f3;
+}
+
+#customerQABottom {
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    padding: 10px;
+}
+
+.customerQAKeword {
+    position: relative;
+    display: flex;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+    line-height: 70px;
+}
+
+.customerQAKeword input {
+    margin-right: 8px;
+}
+
+#kewordSelectQA {
+    font-size: 20px;
+    width: 20%;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+#kewordListQA>label {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.customerQATag {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.customerQATag div {
+    font-size: 20px;
+    width: 20%;
+    line-height: 50px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.customerQATag textarea {
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 80%;
+    height: 50px;
+    display: block;
+    border-radius: 10px;
+    white-space: wrap;
+    resize: none;
+}
+
+#reviewWriteStarBox {
+    font-size: 30px;
+    width: 80%;
+    height: 50px;
+    text-align: left;
+    color: #9B1B30;
+}
+
+#customerQATag_detail {
+    height: 250px;
+    margin: 15px 0;
+}
+
+
+#customerQAButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0 50px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#customerQACancle {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    padding: 0 15px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#customerQACancle:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+
+#customerQAEnter {
+    background-color: rgb(221, 221, 221);
+    border: 0px none;
+    padding: 0 15px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#customerQAEnter:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}

@@ -1,0 +1,101 @@
+#secondContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#secondContainer>h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #4C4556;
+}
+
+#secondContainer>h3>i {
+    color: #F6C026;
+}
+
+
+#secondContainerList {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
+.slideBox {
+    display: flex;
+    gap: 20px;
+    padding-top: 5px;
+}
+
+.slideBox .itemBox {
+    width: 200px;
+}
+
+#secondContainerLeftBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #fff 0%, #ffffff 20%, #ffffff00 100%);
+    width: 80px;
+    height: 100%;
+    z-index: 5;
+}
+
+#secondContainerLeftBtn>i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 15px);
+    background-color: #CA4046;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#secondContainerRightBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #fff 0%, #ffffff 20%, #ffffff00 100%);
+    width: 80px;
+    height: 100%;
+    z-index: 5;
+}
+
+#secondContainerRightBtn>i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 15px);
+    background-color: #CA4046;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#secondSlideBtn {
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+}
+
+#secondSlideBtn>div {
+    width: 20px;
+    height: 8px;
+    margin-left: 3px;
+    background-color: #ffabaf40;
+    border-radius: 5px;
+}
+
+#secondSlideBtn>#secondSlideBtnSelected {
+    width: 100px;
+    background-color: #CA4046;
+}

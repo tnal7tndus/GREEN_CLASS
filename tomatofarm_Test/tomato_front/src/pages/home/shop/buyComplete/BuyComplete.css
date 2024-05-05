@@ -1,0 +1,18 @@
+#buyComplete {
+    margin-top: 50px;
+}
+
+#buyComplete>h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #4C4556;
+    padding: 20px;
+    border-top: 2px solid #4C455650;
+    border-bottom: 2px solid #4C455650;
+    margin-bottom: 30px;
+}
+
+#buyComplete>h3>i {
+    color: #F6C026;
+}

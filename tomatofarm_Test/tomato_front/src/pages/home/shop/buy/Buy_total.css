@@ -1,0 +1,56 @@
+#shopBasketPayContainer {
+    border: 3px solid #9B1B30;
+    width: calc(30% - 20px);
+    position: sticky;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+#shopBasketPayBox {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+#shopBasketPrice {
+    display: flex;
+    flex-direction: column;
+}
+
+#shopBasketPrice>div {
+    border-radius: 10px;
+    background-color: #fff1f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px;
+    padding: 13px;
+}
+
+#shopBasketPrice>div:nth-child(4) {
+    height: 80px;
+}
+
+
+#shopBasketPayContainer #loginBox {
+    text-align: center;
+    margin: auto;
+    line-height: 55px;
+    margin-top: 40px;
+    width: 95%;
+    background-color: #9B1B30;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+}
+
+#shopBasketPayContainer #loginBox:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+
+#shopBasketCancel {
+    width: 90%;
+    margin: 10px auto;
+    top: 350px;
+    font-size: 12px;
+}

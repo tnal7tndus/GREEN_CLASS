@@ -1,0 +1,246 @@
+#itemAskForm {
+    background-color: #9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#itemAskForm>div {
+    position: relative;
+}
+
+#itemAskBox {
+    background-color: white;
+    height: 900px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 50px;
+    max-width: 1000px;
+    width: calc(90vw - 30px);
+    margin: auto;
+}
+
+#itemAskBox::-webkit-scrollbar {
+    width: 10px;
+}
+
+#itemAskBox::-webkit-scrollbar-thumb {
+    background-color: #9b1b1f70;
+    border-radius: 10px;
+}
+
+#itemAskTop {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    position: relative;
+    display: flex;
+
+}
+
+#itemAskBox h4 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    font-weight: inherit;
+}
+
+#itemAskImg {
+    overflow: hidden;
+    width: 25%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itemAskImg img {
+    width: 100%;
+}
+
+#itemAskImg~div {
+    width: 75%;
+    padding-left: 30px;
+}
+
+#itemTitle {
+    margin-top: 20px;
+    font-size: 20px;
+    color: gray;
+    display: block;
+    width: 200px;
+}
+
+#itemAskBottom {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    flex-direction: column;
+}
+
+#itemAskTitle {
+    position: relative;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#itemAskTitle div {
+    display: flex;
+    position: block;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#itemAskTitle textarea {
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 70%;
+    height: 50px;
+    display: block;
+    border-radius: 10px;
+    white-space: wrap;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+#itemAskContent {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#itemAskContent div {
+    display: flex;
+    position: block;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#itemAskContent textarea {
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 70%;
+    height: 300px;
+    display: block;
+    border-radius: 10px;
+    white-space: wrap;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+#itemAskPrivacyContainer {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    width: 75%;
+}
+
+#itemAskPrivacyBox {
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+
+#itemAskPrivacy {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+    margin-right: 15px;
+}
+
+#itemAskPrivacy input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#passwordAsk {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#itemAskButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0 50px;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+#itemAskBoxCancle {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    padding: 0 15px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#itemAskBoxCancle:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+#itemAskBoxEnter {
+    background-color: rgb(221, 221, 221);
+    border: 0px none;
+    padding: 0 15px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#itemAskBoxEnter:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+#itemAskBoxClose {
+    cursor: pointer;
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    background-color: #9B1B30;
+    color: #fff;
+    font-size: 35px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#itemAskBoxClose:hover {
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
