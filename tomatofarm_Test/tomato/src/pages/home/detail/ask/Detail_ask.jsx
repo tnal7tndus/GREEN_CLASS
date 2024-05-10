@@ -9,7 +9,6 @@ import PagingBox, { paging } from '../../../components/PagingBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeAlert } from '../../../redux/basic/actions';
 
-
 const Detail_ask = ({ item }) => {
     const user = useSelector(state => state.user.data);
     const dispatch = useDispatch();

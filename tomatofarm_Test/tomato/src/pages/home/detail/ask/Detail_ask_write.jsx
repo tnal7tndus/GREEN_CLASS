@@ -129,5 +129,4 @@ const Detail_ask_write = ({ item, setRefresh, refresh, itemAskClick }) => {
 
     );
 }
-
 export default Detail_ask_write;
