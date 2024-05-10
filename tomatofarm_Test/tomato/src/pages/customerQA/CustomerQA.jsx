@@ -26,7 +26,13 @@ const CustomerQA = (setRefresh) => {
             .catch(err => {
                 console.log(err.message)
             })
-    }, [])
+    }, []);
+
+    
+
+
+
+
 
     const bestQACdivck = (event) => {
         const ele = event.target.closest('.bestQARow').nextElementSibling;
